@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+:root {
+  --navy-900: #0d2340;
+  --navy-700: #1f3f67;
+  --gold-500: #b89953;
+  --gold-300: #d7be86;
+  --cream-100: #f7f2e9;
+  --cream-200: #efe7d8;
+  --ink: #1a2331;
+  --muted: #58667a;
+  --surface: #ffffff;
+  --shadow: 0 16px 40px rgba(14, 29, 53, 0.14);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  color: var(--ink);
+  line-height: 1.55;
+  background:
+    radial-gradient(circle at top right, rgba(184, 153, 83, 0.2), transparent 45%),
+    linear-gradient(180deg, #f3ede2 0%, #f8f5ef 45%, #f5f7fa 100%);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Merriweather', Georgia, serif;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+code {
+  padding: 0.1rem 0.28rem;
+  border-radius: 6px;
+  background: rgba(13, 35, 64, 0.08);
+}

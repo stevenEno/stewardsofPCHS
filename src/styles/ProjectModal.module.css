@@ -1,0 +1,64 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 29, 52, 0.78);
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.modal {
+  width: min(920px, 96vw);
+  max-height: 92vh;
+  overflow: auto;
+  background: linear-gradient(180deg, #fffdf9, #f6efe2);
+  border-radius: 16px;
+  border: 1px solid #e3d8bf;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.closeButton {
+  border: 0;
+  background: var(--navy-900);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.42rem 0.92rem;
+  cursor: pointer;
+}
+
+.video {
+  width: 100%;
+  margin: 0.78rem 0;
+  border-radius: 12px;
+  background: #000;
+}
+
+.description,
+.student {
+  margin: 0.65rem 0;
+}
+
+.link {
+  color: #1f4f78;
+  font-weight: 700;
+}
+
+.iframe {
+  margin-top: 1rem;
+  width: 100%;
+  min-height: 420px;
+  border: 1px solid #d4deee;
+  border-radius: 12px;
+}

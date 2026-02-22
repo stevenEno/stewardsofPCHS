@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#17395f"/>
+      <stop offset="100%" stop-color="#1f4f76"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="160" y="110" width="880" height="580" rx="28" fill="#fef8ea"/>
+  <path d="M300 620V180h120v440" fill="#d1ae5a"/>
+  <rect x="470" y="220" width="460" height="36" rx="8" fill="#2f5f8b"/>
+  <rect x="470" y="290" width="400" height="36" rx="8" fill="#2f5f8b"/>
+  <rect x="470" y="360" width="430" height="36" rx="8" fill="#2f5f8b"/>
+  <rect x="470" y="430" width="360" height="36" rx="8" fill="#2f5f8b"/>
+  <text x="160" y="740" fill="#fff" font-size="62" font-family="Georgia, serif">Digital Prayer Journal</text>
+</svg>

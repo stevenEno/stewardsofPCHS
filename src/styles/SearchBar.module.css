@@ -1,0 +1,29 @@
+.wrapper {
+  max-width: 1140px;
+  margin: 1.2rem auto 0.9rem;
+  padding: 0 0.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  color: #334962;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #bfccd9;
+  border-radius: 12px;
+  padding: 0.78rem 0.82rem;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(16, 36, 64, 0.08);
+}
+
+.input:focus-visible {
+  outline: 2px solid #295a8a;
+  outline-offset: 1px;
+}

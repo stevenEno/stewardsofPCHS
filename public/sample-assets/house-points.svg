@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#152f50"/>
+      <stop offset="100%" stop-color="#2a5d88"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="120" y="120" width="960" height="560" rx="28" fill="#fff8eb"/>
+  <rect x="210" y="230" width="150" height="360" rx="12" fill="#d3ae58"/>
+  <rect x="400" y="290" width="150" height="300" rx="12" fill="#315f8a"/>
+  <rect x="590" y="350" width="150" height="240" rx="12" fill="#d3ae58"/>
+  <rect x="780" y="260" width="150" height="330" rx="12" fill="#315f8a"/>
+  <text x="150" y="740" fill="#fff" font-size="62" font-family="Georgia, serif">House Points Dashboard</text>
+</svg>

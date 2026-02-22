@@ -1,0 +1,65 @@
+.app {
+  min-height: 100vh;
+}
+
+.introPanel {
+  max-width: 1140px;
+  margin: 1.3rem auto;
+  padding: 1.4rem;
+  background: linear-gradient(120deg, rgba(13, 35, 64, 0.96), rgba(32, 67, 107, 0.92));
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.introLabel {
+  margin: 0;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-300);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.introPanel h2 {
+  margin: 0.45rem 0 0.6rem;
+  font-size: clamp(1.25rem, 3.2vw, 2rem);
+}
+
+.introPanel p {
+  margin: 0;
+  max-width: 780px;
+}
+
+.metrics {
+  margin-top: 1.1rem;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+}
+
+.metrics article {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.metrics span {
+  display: block;
+  color: var(--gold-300);
+  font-weight: 800;
+  font-size: 1.35rem;
+}
+
+.metrics p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .introPanel {
+    margin: 0.9rem 0.75rem;
+    padding: 1rem;
+  }
+}

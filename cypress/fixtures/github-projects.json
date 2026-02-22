@@ -1,0 +1,20 @@
+{
+  "folders": [
+    { "name": "project-a", "type": "dir" },
+    { "name": "project-b", "type": "dir" }
+  ],
+  "metadata": {
+    "project-a": {
+      "name": "Weather App",
+      "description": "Local weather dashboard.",
+      "studentName": "Nico",
+      "githubLink": "https://github.com/example/pull/11"
+    },
+    "project-b": {
+      "name": "History Timeline",
+      "description": "Interactive timeline.",
+      "studentName": "Leah",
+      "githubLink": "https://github.com/example/pull/12"
+    }
+  }
+}

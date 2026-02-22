@@ -1,0 +1,41 @@
+name: Optional Generate Project Demos
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'projects/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  detect-and-generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Analyze project folders for missing media
+        run: node scripts/generate-project-videos.mjs
+
+      - name: Commit generated media (if your script creates files)
+        run: |
+          if [[ -n "$(git status --porcelain projects)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add projects
+            git commit -m "chore: generate project demo media"
+            git push
+          else
+            echo "No generated media changes to commit."
+          fi

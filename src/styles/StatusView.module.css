@@ -1,0 +1,18 @@
+.wrapper {
+  max-width: 840px;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: var(--radius);
+  border-left: 5px solid var(--gold-500);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.wrapper h2 {
+  margin: 0;
+  color: #1c3457;
+}
+
+.wrapper p {
+  margin: 0.35rem 0 0;
+}
