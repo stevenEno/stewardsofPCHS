@@ -3,43 +3,62 @@
 }
 
 .introPanel {
+  position: relative;
   max-width: 1140px;
-  margin: 1.3rem auto;
-  padding: 1.4rem;
-  background: linear-gradient(120deg, rgba(13, 35, 64, 0.96), rgba(32, 67, 107, 0.92));
+  margin: 1.1rem auto;
+  padding: 1.55rem;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(215, 190, 134, 0.3), transparent 38%),
+    linear-gradient(125deg, rgba(14, 38, 69, 0.98), rgba(31, 72, 112, 0.95), rgba(42, 95, 126, 0.93));
   color: #fff;
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.introPanel::after {
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  right: -80px;
+  bottom: -80px;
+  background: rgba(214, 184, 120, 0.24);
 }
 
 .introLabel {
   margin: 0;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold-300);
+  color: #ecd8a8;
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .introPanel h2 {
-  margin: 0.45rem 0 0.6rem;
-  font-size: clamp(1.25rem, 3.2vw, 2rem);
+  margin: 0.45rem 0 0.55rem;
+  font-size: clamp(1.45rem, 3.4vw, 2.2rem);
+  max-width: 900px;
 }
 
 .introPanel p {
   margin: 0;
   max-width: 780px;
+  font-size: 1.02rem;
 }
 
 .metrics {
-  margin-top: 1.1rem;
+  margin-top: 1.05rem;
   display: grid;
   gap: 0.75rem;
-  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 
 .metrics article {
-  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 12px;
   padding: 0.8rem;
@@ -59,7 +78,7 @@
 
 @media (max-width: 720px) {
   .introPanel {
-    margin: 0.9rem 0.75rem;
+    margin: 0.85rem 0.75rem;
     padding: 1rem;
   }
 }

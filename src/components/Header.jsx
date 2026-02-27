@@ -5,31 +5,36 @@ const REPO_URL = getConfig('VITE_GITHUB_REPO_URL', 'https://github.com/steveneno
 
 function Header({ useSamplePreview, onToggleSample, hasLiveProjects, currentPage = 'showcase' }) {
   const onShowcase = currentPage === 'showcase';
+  const onPathways = currentPage === 'pathways';
+  const onGuide = currentPage === 'guide';
 
   return (
     <header className={styles.header}>
       <div className={styles.topBar}>
         <p>Stewards of PCHS</p>
-        <p>Building student excellence through code and collaboration</p>
+        <p>Celebrating creative students across every neighborhood</p>
       </div>
       <div className={styles.inner}>
         <div>
-          <p className={styles.kicker}>Student Innovation</p>
-          <h1 className={styles.title}>Student Projects Showcase</h1>
+          <p className={styles.kicker}>Pacifica Proud</p>
+          <h1 className={styles.title}>Seawolf Project Showcase</h1>
           <div className={styles.navLinks}>
             <a className={`${styles.navPill} ${onShowcase ? styles.navActive : ''}`} href="/">
               Showcase
             </a>
-            <a className={`${styles.navPill} ${!onShowcase ? styles.navActive : ''}`} href="/pathways">
+            <a className={`${styles.navPill} ${onPathways ? styles.navActive : ''}`} href="/pathways">
               Pathways of Pacifica
+            </a>
+            <a className={`${styles.navPill} ${onGuide ? styles.navActive : ''}`} href="/git-walkthrough">
+              Student Git Guide
             </a>
           </div>
         </div>
         <div className={styles.actions}>
           {onShowcase ? (
             <>
-              <a className={styles.guideLink} href="#git-walkthrough" aria-label="Jump to student Git walkthrough">
-                Student Git Walkthrough
+              <a className={styles.guideLink} href="/git-walkthrough" aria-label="Open the student Git walkthrough page">
+                How Students Submit Projects
               </a>
               <button
                 type="button"
@@ -38,7 +43,7 @@ function Header({ useSamplePreview, onToggleSample, hasLiveProjects, currentPage
                 aria-label={useSamplePreview ? 'Switch to live GitHub project mode' : 'Switch to sample preview mode'}
                 disabled={!hasLiveProjects && useSamplePreview}
               >
-                {useSamplePreview ? 'Switch To Live Data' : 'Preview Sample Data'}
+                {useSamplePreview ? 'Switch To Live Data' : 'Preview Sample Stories'}
               </button>
             </>
           ) : null}

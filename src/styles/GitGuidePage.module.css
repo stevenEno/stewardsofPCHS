@@ -1,0 +1,32 @@
+.page {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 0.75rem 1.3rem;
+}
+
+.hero {
+  margin-top: 1rem;
+  padding: 1.2rem;
+  border-radius: 18px;
+  color: #fff;
+  background: linear-gradient(120deg, #123057, #24527f 60%, #2d6889);
+  box-shadow: var(--shadow);
+}
+
+.kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold-300);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 0.35rem 0 0.45rem;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 760px;
+}

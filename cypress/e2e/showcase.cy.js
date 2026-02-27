@@ -28,7 +28,7 @@ describe('Student showcase page', () => {
   });
 
   it('loads and displays the highlighted project', () => {
-    cy.contains('Student Projects Showcase').should('be.visible');
+    cy.contains('Seawolf Project Showcase').should('be.visible');
     cy.contains('Weather App').should('be.visible');
   });
 

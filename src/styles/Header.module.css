@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.35rem 1rem;
+  padding: 0.4rem 1rem;
   background: var(--gold-500);
   color: #1f2b3f;
   font-weight: 700;
@@ -43,7 +43,7 @@
 
 .title {
   margin: 0.2rem 0 0;
-  font-size: clamp(1.25rem, 2.8vw, 1.9rem);
+  font-size: clamp(1.32rem, 2.9vw, 2rem);
 }
 
 .navLinks {
@@ -57,14 +57,14 @@
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #e9f0f8;
-  padding: 0.2rem 0.62rem;
+  padding: 0.24rem 0.68rem;
   border-radius: 999px;
   font-size: 0.83rem;
   font-weight: 700;
 }
 
 .navActive {
-  background: rgba(232, 205, 143, 0.2);
+  background: rgba(232, 205, 143, 0.22);
   border-color: #d9bd7d;
   color: #fbeecf;
 }

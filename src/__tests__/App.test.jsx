@@ -45,7 +45,7 @@ describe('App integration', () => {
     expect(screen.getByText('Loading projects')).toBeInTheDocument();
 
     await waitFor(() => {
-      expect(screen.getByText('Student Projects Showcase')).toBeInTheDocument();
+      expect(screen.getByText('Seawolf Project Showcase')).toBeInTheDocument();
       expect(screen.getAllByText('Robotics Dashboard').length).toBeGreaterThan(0);
     });
   });

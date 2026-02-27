@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
 import Modal from 'react-modal';
-import GitWalkthrough from './components/GitWalkthrough';
 import Header from './components/Header';
 import HighlightedProject from './components/HighlightedProject';
 import ProjectModal from './components/ProjectModal';
@@ -92,31 +91,29 @@ function App() {
 
       <main>
         <section className={styles.introPanel}>
-          <p className={styles.introLabel}>Faith. Creativity. Craft.</p>
-          <h2>Celebrate student-built projects and contribute through GitHub pull requests.</h2>
+          <p className={styles.introLabel}>Where Seawolves Shine</p>
+          <h2>Pacifica Students Building with the AI Agents and Solving Real World Problems</h2>
           <p>
-            Every project card below comes from the repository structure under <code>/projects</code>. Students fork,
-            branch, add assets, and submit PRs for instructor review and merge.
+            This is a celebration wall for student imagination, impact, and courage. Explore projects, ideas, and stories
+            that show how Pacifica students are building with purpose.
           </p>
           <div className={styles.metrics}>
             <article>
               <span>{displayProjects.length}</span>
-              <p>Projects Available</p>
+              <p>Student Stories Featured</p>
             </article>
             <article>
-              <span>{useSamplePreview ? 'Sample' : 'Live'}</span>
-              <p>Data Source</p>
+              <span>Bold</span>
+              <p>Creative Thinking</p>
             </article>
             <article>
-              <span>Vercel</span>
-              <p>Auto Deploy On Merge</p>
+              <span>Real</span>
+              <p>Community Impact</p>
             </article>
           </div>
         </section>
 
-        <GitWalkthrough />
-
-        {isLoading ? <StatusView title="Loading projects" body="Fetching project metadata and demo assets from GitHub..." /> : null}
+        {isLoading ? <StatusView title="Loading projects" body="Preparing the latest Seawolf project stories..." /> : null}
 
         {!isLoading && liveError ? <StatusView title="Preview notice" body={liveError} /> : null}
 
