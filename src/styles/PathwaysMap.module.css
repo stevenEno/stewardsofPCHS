@@ -1,0 +1,149 @@
+.wrapper {
+  margin: 1rem 0 1.4rem;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 0.9rem;
+}
+
+.chartPanel {
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  border-top: 5px solid var(--gold-500);
+  padding: 0.8rem;
+}
+
+.legendRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: #2b415c;
+  margin-bottom: 0.5rem;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  background: radial-gradient(circle at center, #f1eadb, #f9f7f1);
+}
+
+.nodeText {
+  font-size: 13px;
+  fill: #25364d;
+  font-weight: 600;
+}
+
+.centerBox {
+  fill: #1f3f67;
+  stroke: #d2b46f;
+  stroke-width: 2;
+}
+
+.centerTextMain {
+  fill: #fff;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.centerTextSub {
+  fill: #ebd8aa;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+.flowPath {
+  fill: none;
+  stroke: url(#flow-gradient);
+  stroke-linecap: round;
+  transition: opacity 0.2s ease, stroke-width 0.2s ease;
+}
+
+.detailPanel {
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  border-top: 5px solid #1f3f67;
+  padding: 0.9rem;
+}
+
+.detailPanel h3 {
+  margin: 0;
+}
+
+.detailPanel > p {
+  margin: 0.3rem 0 0.75rem;
+  color: #4b5b70;
+  font-size: 0.95rem;
+}
+
+.pathList {
+  display: grid;
+  gap: 0.45rem;
+  max-height: 310px;
+  overflow: auto;
+  padding-right: 0.25rem;
+}
+
+.pathButton {
+  border: 1px solid #d9e2ee;
+  background: #f8fafc;
+  border-radius: 10px;
+  text-align: left;
+  padding: 0.52rem;
+  cursor: pointer;
+}
+
+.pathButton strong,
+.pathButton span {
+  display: block;
+}
+
+.pathButton span {
+  color: #4b5b70;
+  font-size: 0.86rem;
+}
+
+.active {
+  border-color: #bb9e57;
+  background: #f8f1e2;
+}
+
+.storyCard {
+  margin-top: 0.8rem;
+  border-top: 1px dashed #d9cba7;
+  padding-top: 0.7rem;
+}
+
+.storyCard h4 {
+  margin: 0;
+}
+
+.storyCard p {
+  margin: 0.35rem 0;
+  font-size: 0.92rem;
+}
+
+.resetButton {
+  margin-top: 0.4rem;
+  border: 0;
+  border-radius: 999px;
+  background: #1e4169;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1060px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .pathList {
+    max-height: 200px;
+  }
+}

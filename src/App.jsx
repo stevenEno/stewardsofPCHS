@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import Modal from 'react-modal';
+import GitWalkthrough from './components/GitWalkthrough';
 import Header from './components/Header';
 import HighlightedProject from './components/HighlightedProject';
 import ProjectModal from './components/ProjectModal';
@@ -86,6 +87,7 @@ function App() {
           setUseSamplePreview((current) => !current);
         }}
         hasLiveProjects={hasLiveProjects}
+        currentPage="showcase"
       />
 
       <main>
@@ -111,6 +113,8 @@ function App() {
             </article>
           </div>
         </section>
+
+        <GitWalkthrough />
 
         {isLoading ? <StatusView title="Loading projects" body="Fetching project metadata and demo assets from GitHub..." /> : null}
 

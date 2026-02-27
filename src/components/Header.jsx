@@ -3,7 +3,9 @@ import { getConfig } from '../lib/runtimeConfig';
 
 const REPO_URL = getConfig('VITE_GITHUB_REPO_URL', 'https://github.com/steveneno/stewardsofPCHS');
 
-function Header({ useSamplePreview, onToggleSample, hasLiveProjects }) {
+function Header({ useSamplePreview, onToggleSample, hasLiveProjects, currentPage = 'showcase' }) {
+  const onShowcase = currentPage === 'showcase';
+
   return (
     <header className={styles.header}>
       <div className={styles.topBar}>
@@ -14,17 +16,32 @@ function Header({ useSamplePreview, onToggleSample, hasLiveProjects }) {
         <div>
           <p className={styles.kicker}>Student Innovation</p>
           <h1 className={styles.title}>Student Projects Showcase</h1>
+          <div className={styles.navLinks}>
+            <a className={`${styles.navPill} ${onShowcase ? styles.navActive : ''}`} href="/">
+              Showcase
+            </a>
+            <a className={`${styles.navPill} ${!onShowcase ? styles.navActive : ''}`} href="/pathways">
+              Pathways of Pacifica
+            </a>
+          </div>
         </div>
         <div className={styles.actions}>
-          <button
-            type="button"
-            className={styles.modeButton}
-            onClick={onToggleSample}
-            aria-label={useSamplePreview ? 'Switch to live GitHub project mode' : 'Switch to sample preview mode'}
-            disabled={!hasLiveProjects && useSamplePreview}
-          >
-            {useSamplePreview ? 'Switch To Live Data' : 'Preview Sample Data'}
-          </button>
+          {onShowcase ? (
+            <>
+              <a className={styles.guideLink} href="#git-walkthrough" aria-label="Jump to student Git walkthrough">
+                Student Git Walkthrough
+              </a>
+              <button
+                type="button"
+                className={styles.modeButton}
+                onClick={onToggleSample}
+                aria-label={useSamplePreview ? 'Switch to live GitHub project mode' : 'Switch to sample preview mode'}
+                disabled={!hasLiveProjects && useSamplePreview}
+              >
+                {useSamplePreview ? 'Switch To Live Data' : 'Preview Sample Data'}
+              </button>
+            </>
+          ) : null}
           <a
             className={styles.repoLink}
             href={REPO_URL}

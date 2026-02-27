@@ -35,8 +35,8 @@ Result: pass
 
 Summary:
 
-- Test Suites: 3 passed, 3 total
-- Tests: 7 passed, 7 total
+- Test Suites: 4 passed, 4 total
+- Tests: 8 passed, 8 total
 
 ## Production Build
 
@@ -65,8 +65,8 @@ Result: pass
 
 Summary:
 
-- Specs: 1 passed
-- Tests: 3 passed, 0 failed
+- Specs: 2 passed (`pathways.cy.js`, `showcase.cy.js`)
+- Tests: 4 passed, 0 failed
 - Browser: Electron (headless)
 
 Notes:

@@ -10,6 +10,7 @@ A React + Vite web app that showcases student projects and teaches a GitHub-firs
 - Opens a modal with project video, full description, student name, and GitHub link.
 - Supports project search by project name or student.
 - Includes a sample preview mode so the full UI can be reviewed before live GitHub projects are available.
+- Includes a second page (`/pathways`) called **Pathways of Pacifica** with an interactive origin -> Pacifica -> outcome visualization.
 
 ## Stack
 
@@ -37,6 +38,21 @@ A React + Vite web app that showcases student projects and teaches a GitHub-firs
 /.github/workflows/
 ```
 
+### Pathways data source
+
+The `/pathways` page currently uses curated data in:
+
+- `/src/lib/pathwaysData.js`
+
+Update that file to add real origin schools, Pacifica experiences, and destination outcomes.  
+Each item in `pathways` renders as a selectable path in the visualization and in the detail panel.
+
+### Pathways reference links
+
+- [Crafting the Class of 2030: A Certain Kind of Person](https://www.pacificachristian.org/about/pacifica-stories/crafting-the-class-of-2030-a-certain-kind-of-person)
+- [From All Neighborhoods](https://www.pacificachristian.org/about/from-all-neighborhoods)
+- [Celebrating More College Acceptances](https://www.pacificachristian.org/about/pacifica-stories/celebrating-more-college-acceptances)
+
 ## Student contribution workflow
 
 1. Fork this repository on GitHub.
@@ -55,6 +71,39 @@ A React + Vite web app that showcases student projects and teaches a GitHub-firs
 7. Open a Pull Request from your branch into this repo's `main` branch.
 8. Instructor reviews and merges manually.
 9. On merge, Vercel auto-deploys the updated site.
+
+## Student Git Walkthrough (share with students)
+
+Use this as a classroom-ready checklist.
+
+1. Create a GitHub account (if needed), then fork this repository:
+   [Fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+2. Clone your fork to your computer with either:
+   - [GitHub Desktop](https://github.com/apps/desktop)
+   - Command line Git ([Install Git](https://git-scm.com/downloads))
+3. Create a branch:
+   `git checkout -b add-my-project`
+4. Add your project folder under `/projects/your-project-slug/` with:
+   - `project.json`
+   - `demo.mp4` (5-7 second clip)
+   - `thumbnail.jpg`
+   - source files
+5. Commit and push:
+   `git add .`
+   `git commit -m "Add my project"`
+   `git push origin add-my-project`
+6. Open a pull request into this repository's `main` branch:
+   [Create a PR from a fork](https://docs.github.com/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
+7. Wait for instructor review and merge.
+8. After merge, Vercel auto-deploys and your project appears on the live site.
+
+### Helpful tools and tutorials
+
+- [GitHub Hello World](https://docs.github.com/en/get-started/start-your-journey/hello-world)
+- [Pro Git book (free)](https://git-scm.com/book/en/v2)
+- [VS Code source control guide](https://code.visualstudio.com/docs/sourcecontrol/overview)
+- [FFmpeg downloads](https://www.ffmpeg.org/download.html) for clipping `demo.mp4`
+- [OBS Studio](https://obsproject.com/) for screen recordings
 
 ### `project.json` schema
 
