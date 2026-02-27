@@ -26,11 +26,14 @@ function PathwaysPage() {
           <h1>{pathwaysSummary.title}</h1>
           <p>{pathwaysSummary.subtitle}</p>
 
-          <div className={styles.highlights}>
-            {pathwaysSummary.highlights.map((item) => (
-              <article key={item}>{item}</article>
-            ))}
-          </div>
+        <div className={styles.highlights}>
+          {pathwaysSummary.highlights.map((item) => (
+            <article key={item}>{item}</article>
+          ))}
+        </div>
+        {pathwaysSummary.refreshedAt ? (
+          <p className={styles.refreshed}>Last data refresh: {pathwaysSummary.refreshedAt}</p>
+        ) : null}
 
           <div className={styles.stats}>
             <article>

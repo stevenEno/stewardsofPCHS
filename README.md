@@ -40,12 +40,50 @@ A React + Vite web app that showcases student projects and teaches a GitHub-firs
 
 ### Pathways data source
 
-The `/pathways` page currently uses curated data in:
+The `/pathways` page is built from one admissions-managed CSV:
+
+- `/data/pathways/pathways_master.csv`
+
+Pipeline command:
+
+```bash
+npm run build:pathways
+```
+
+This validates the CSV and regenerates:
+
+- `/src/lib/pathwaysData.generated.js`
+
+The app consumes generated data through:
 
 - `/src/lib/pathwaysData.js`
 
-Update that file to add real origin schools, Pacifica experiences, and destination outcomes.  
-Each item in `pathways` renders as a selectable path in the visualization and in the detail panel.
+Detailed admissions workflow:
+
+- `/docs/pathways-data-operations.md`
+- `/docs/pathways-google-form-setup.md`
+
+### Pathways source files (for admissions updates)
+
+- `/data/pathways/sources/finalsite_export.csv`
+- `/data/pathways/sources/alumni_form.csv`
+- `/data/pathways/sources/google_form_responses.csv` (optional import source)
+
+### Pathways automation commands
+
+```bash
+# Single-command admissions workflow (recommended)
+npm run pathways:admissions-update
+
+# Import latest Google Form CSV into normalized alumni source file
+npm run pathways:import-google
+
+# Merge Finalsite + alumni source files into pathways master CSV
+npm run pathways:merge
+
+# Run merge + regenerate app pathways data module
+npm run pathways:refresh
+```
 
 ### Pathways reference links
 
@@ -202,3 +240,8 @@ npm run cypress
 ```
 
 Test outcomes are recorded in `tests/results.md`.
+
+## License
+
+This project is open source under the [MIT License](./LICENSE).
+You are free to fork, use, modify, and redistribute it, including for school and district deployments.

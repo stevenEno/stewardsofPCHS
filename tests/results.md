@@ -23,6 +23,53 @@ Notes:
 - Dependencies installed successfully.
 - npm reported 19 high severity vulnerabilities in transitive dependencies.
 
+## Pathways CSV Build
+
+Command:
+
+```bash
+npm run build:pathways
+```
+
+Result: pass
+
+Summary:
+
+- CSV validated successfully.
+- Generated `src/lib/pathwaysData.generated.js` from `data/pathways/pathways_master.csv`.
+
+## Pathways Import + Merge Pipeline
+
+Commands:
+
+```bash
+npm run pathways:import-google
+npm run pathways:refresh
+```
+
+Result: pass
+
+Summary:
+
+- Imported Google Form sample responses into `data/pathways/sources/alumni_form.csv` (merged with existing rows).
+- Merged `data/pathways/sources/finalsite_export.csv` + `data/pathways/sources/alumni_form.csv` into `data/pathways/pathways_master.csv`.
+- Regenerated `src/lib/pathwaysData.generated.js` with 9 pathways.
+
+## Admissions One-Command Script
+
+Command:
+
+```bash
+npm run pathways:admissions-update
+```
+
+Result: pass
+
+Summary:
+
+- Executed import, merge, generation, and build validation in one command.
+- Script output confirms updated artifacts and next action (commit + push).
+
 ## Unit + Integration (Jest)
 
 Command:
