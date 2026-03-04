@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getConfig } from './runtimeConfig';
 
-const API_BASE_URL = getConfig('VITE_SKILL_TREE_API_URL', 'http://127.0.0.1:8080');
+const API_BASE_URL = getConfig('VITE_SKILL_TREE_API_URL', '');
 
 const client = axios.create({
   baseURL: API_BASE_URL,
@@ -9,7 +9,7 @@ const client = axios.create({
 });
 
 export function getApiBaseUrl() {
-  return API_BASE_URL;
+  return API_BASE_URL || '(same-origin /api)';
 }
 
 export async function fetchSubjects() {

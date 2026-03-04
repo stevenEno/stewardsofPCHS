@@ -68,7 +68,7 @@ describe('SkillTreePage', () => {
 
     await waitFor(() => {
       expect(screen.getByText('High School Skill Tree Explorer')).toBeInTheDocument();
-      expect(screen.getByRole('button', { name: /Node 1/i })).toBeInTheDocument();
+      expect(screen.getByRole('heading', { name: 'Node 1' })).toBeInTheDocument();
     });
 
     expect(screen.getByText('Total Nodes')).toBeInTheDocument();
@@ -80,7 +80,7 @@ describe('SkillTreePage', () => {
     render(<SkillTreePage />);
 
     await waitFor(() => {
-      expect(screen.getByRole('button', { name: /Node 1/i })).toBeInTheDocument();
+      expect(screen.getByRole('heading', { name: 'Node 1' })).toBeInTheDocument();
     });
 
     await user.click(screen.getByRole('button', { name: 'Mark Mastered' }));

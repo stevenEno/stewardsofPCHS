@@ -20,6 +20,9 @@
   },
   "dependencies": {
     "axios": "^1.8.4",
+    "cytoscape": "^3.33.1",
+    "cytoscape-dagre": "^2.5.0",
+    "dagre": "^0.8.5",
     "express": "^5.2.1",
     "masonry-layout": "^4.2.2",
     "react": "^18.3.1",

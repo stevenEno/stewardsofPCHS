@@ -199,6 +199,8 @@ npm run api:dev
 npm run dev
 ```
 
+If `npm run dev` was already running, restart it after pulling latest changes so the Vite `/api` proxy is active.
+
 Then open:
 
 - `http://127.0.0.1:5173/skill-tree`

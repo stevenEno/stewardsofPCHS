@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import Header from './components/Header';
+import SkillTreeGraph from './components/SkillTreeGraph';
 import {
   fetchCrossLinks,
   fetchRecommendations,
@@ -15,12 +16,6 @@ function slugify(value) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
-}
-
-function statusClass(status) {
-  if (status === 'mastered') return styles.statusMastered;
-  if (status === 'recommended') return styles.statusRecommended;
-  return styles.statusLocked;
 }
 
 function SkillTreePage() {
@@ -217,29 +212,19 @@ function SkillTreePage() {
         </section>
 
         <section className={styles.grid}>
-          <article className={styles.card}>
-            <h2>Nodes</h2>
-            {isLoading ? <p>Loading subject data...</p> : null}
+          <article className={`${styles.card} ${styles.graphCard}`}>
+            <h2>Skill Graph</h2>
+            <p className={styles.graphHint}>Click a node to inspect details. Zoom and pan to explore dependencies.</p>
             {!isLoading ? (
-              <ul className={styles.nodeList}>
-                {(recommendation?.nodes || []).map((node) => (
-                  <li key={node.id}>
-                    <button
-                      type="button"
-                      className={`${styles.nodeButton} ${statusClass(node.status)} ${
-                        selectedNodeId === node.id ? styles.nodeSelected : ''
-                      }`}
-                      onClick={() => setSelectedNodeId(node.id)}
-                    >
-                      <span className={styles.nodeTitle}>{node.name}</span>
-                      <span className={styles.nodeMeta}>
-                        {node.id} | {node.level}
-                      </span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
+              <SkillTreeGraph
+                nodes={recommendation?.nodes || []}
+                edges={recommendation?.edges || []}
+                selectedNodeId={selectedNodeId}
+                onSelectNode={setSelectedNodeId}
+              />
+            ) : (
+              <p>Loading graph...</p>
+            )}
           </article>
 
           <article className={styles.card}>

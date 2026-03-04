@@ -113,6 +113,16 @@
   min-height: 520px;
 }
 
+.graphCard {
+  grid-column: 1 / -1;
+  min-height: 0;
+}
+
+.graphHint {
+  margin-top: -0.2rem;
+  color: var(--muted);
+}
+
 .card h2 {
   margin-top: 0;
 }
