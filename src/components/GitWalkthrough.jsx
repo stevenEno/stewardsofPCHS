@@ -1,6 +1,30 @@
+import { useState } from 'react';
 import styles from '../styles/GitWalkthrough.module.css';
 
 const REPO_URL = 'https://github.com/stevenEno/stewardsofPCHS';
+
+function CommandBlock({ id, command }) {
+  const [copied, setCopied] = useState(false);
+
+  async function handleCopy() {
+    try {
+      await navigator.clipboard.writeText(command);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      setCopied(false);
+    }
+  }
+
+  return (
+    <div className={styles.commandWrap}>
+      <button type="button" className={styles.copyButton} onClick={handleCopy} aria-label={`Copy command ${id}`}>
+        {copied ? 'Copied' : 'Copy'}
+      </button>
+      <pre className={styles.codeBlock}><code>{command}</code></pre>
+    </div>
+  );
+}
 
 function GitWalkthrough() {
   return (
@@ -23,13 +47,16 @@ function GitWalkthrough() {
           <p>
             Fork <a href={REPO_URL} target="_blank" rel="noreferrer">stevenEno/stewardsofPCHS</a>, then clone your fork.
           </p>
-          <pre className={styles.codeBlock}><code>{`git clone https://github.com/YOUR-USERNAME/stewardsofPCHS.git\ncd stewardsofPCHS`}</code></pre>
+          <CommandBlock
+            id="clone-repo"
+            command={`git clone https://github.com/YOUR-USERNAME/stewardsofPCHS.git\ncd stewardsofPCHS`}
+          />
         </li>
 
         <li>
           <h3>2) Create a branch for your submission</h3>
           <p>Branch names should describe your work clearly.</p>
-          <pre className={styles.codeBlock}><code>{`git checkout -b add-my-project`}</code></pre>
+          <CommandBlock id="create-branch" command={`git checkout -b add-my-project`} />
         </li>
 
         <li>
@@ -72,26 +99,33 @@ function GitWalkthrough() {
             <a href="https://obsproject.com/" target="_blank" rel="noreferrer">OBS Studio (recording)</a>
           </div>
           <p>Mac setup (if Homebrew is not installed):</p>
-          <pre className={styles.codeBlock}><code>{`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`}</code></pre>
+          <CommandBlock
+            id="install-homebrew"
+            command={`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`}
+          />
           <p>Mac install command (requires Homebrew):</p>
-          <pre className={styles.codeBlock}><code>{`brew install ffmpeg`}</code></pre>
+          <CommandBlock id="install-ffmpeg" command={`brew install ffmpeg`} />
           <p>Trim your recording:</p>
-          <pre className={styles.codeBlock}><code>{`ffmpeg -i recording.mp4 -t 7 -an -movflags +faststart demo.mp4`}</code></pre>
+          <CommandBlock id="trim-demo-video" command={`ffmpeg -i recording.mp4 -t 7 -an -movflags +faststart demo.mp4`} />
           <p>Optional: force web-friendly size/compression:</p>
-          <pre className={styles.codeBlock}><code>{`ffmpeg -i recording.mp4 -t 7 -an -vf "scale=1280:-2" -c:v libx264 -preset medium -crf 24 -movflags +faststart demo.mp4`}</code></pre>
+          <CommandBlock
+            id="compress-demo-video"
+            command={`ffmpeg -i recording.mp4 -t 7 -an -vf "scale=1280:-2" -c:v libx264 -preset medium -crf 24 -movflags +faststart demo.mp4`}
+          />
         </li>
 
         <li>
           <h3>6) Generate <code>thumbnail.jpg</code> (required)</h3>
           <p>Create from first frame of your demo video:</p>
-          <pre className={styles.codeBlock}><code>{`ffmpeg -i demo.mp4 -vf "select=eq(n\\,0)" -q:v 3 thumbnail.jpg`}</code></pre>
+          <CommandBlock id="generate-thumbnail" command={`ffmpeg -i demo.mp4 -vf "select=eq(n\\,0)" -q:v 3 thumbnail.jpg`} />
         </li>
 
         <li>
           <h3>7) Commit, push, and open your PR</h3>
-          <pre className={styles.codeBlock}><code>{`git add .
-git commit -m "Add my project"
-git push origin add-my-project`}</code></pre>
+          <CommandBlock
+            id="commit-push"
+            command={`git add .\ngit commit -m "Add my project"\ngit push origin add-my-project`}
+          />
           <p>Open a pull request from your branch into <code>stevenEno/stewardsofPCHS:main</code>.</p>
           <a
             href="https://docs.github.com/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork"

@@ -54,8 +54,23 @@
   font-weight: 700;
 }
 
-.codeBlock {
+.commandWrap {
   margin: 0.45rem 0;
+}
+
+.copyButton {
+  border: 0;
+  border-radius: 999px;
+  background: #e9d5a8;
+  color: #263a55;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.22rem 0.72rem;
+  margin-bottom: 0.3rem;
+}
+
+.codeBlock {
+  margin: 0;
   background: #182a44;
   color: #f4f8ff;
   border-radius: 10px;

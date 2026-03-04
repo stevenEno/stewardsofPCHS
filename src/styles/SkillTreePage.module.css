@@ -1,0 +1,216 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem 1rem 2.5rem;
+}
+
+.hero {
+  background: linear-gradient(145deg, #f8f2e5, #ffffff);
+  border: 1px solid #dfcfaf;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.2rem;
+}
+
+.kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--navy-700);
+}
+
+.hero h1 {
+  margin: 0.4rem 0 0.55rem;
+}
+
+.hero p {
+  margin: 0;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.85rem;
+  align-items: end;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.32rem;
+  font-weight: 700;
+}
+
+.controls select,
+.controls input {
+  border-radius: 10px;
+  border: 1px solid #b7c2d2;
+  padding: 0.5rem 0.62rem;
+  background: #fff;
+}
+
+.controls button {
+  border: 0;
+  border-radius: 999px;
+  background: var(--navy-900);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.58rem 0.9rem;
+  cursor: pointer;
+}
+
+.error {
+  margin-top: 1rem;
+  border: 1px solid #f5c2c2;
+  background: #fff2f2;
+  color: #992020;
+  border-radius: 12px;
+  padding: 0.7rem;
+}
+
+.metrics {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.7rem;
+}
+
+.metrics article {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #dee5ef;
+  padding: 0.65rem;
+}
+
+.metrics span {
+  display: block;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--navy-900);
+}
+
+.metrics p {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+}
+
+.grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid #dde4ee;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  min-height: 520px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.nodeList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  max-height: 460px;
+  overflow: auto;
+}
+
+.nodeButton {
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 0.55rem 0.65rem;
+  cursor: pointer;
+}
+
+.nodeSelected {
+  outline: 2px solid #1f3f67;
+  outline-offset: 1px;
+}
+
+.statusMastered {
+  background: #e8fbe8;
+  border-color: #86d986;
+}
+
+.statusRecommended {
+  background: #fff8d8;
+  border-color: #e7c94f;
+}
+
+.statusLocked {
+  background: #f3f5f8;
+  border-color: #c9d1db;
+}
+
+.nodeTitle {
+  display: block;
+  font-weight: 700;
+}
+
+.nodeMeta {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.details h3 {
+  margin-top: 0;
+}
+
+.details h4 {
+  margin-bottom: 0.35rem;
+}
+
+.details ul {
+  margin-top: 0.1rem;
+  padding-left: 1rem;
+}
+
+.details button {
+  border: 0;
+  border-radius: 999px;
+  background: var(--gold-500);
+  color: #182338;
+  font-weight: 700;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+}
+
+.linkButton {
+  margin-bottom: 0.25rem;
+}
+
+.footerNote {
+  margin-top: 1rem;
+  background: #f7fbff;
+  border: 1px solid #d9e8fb;
+  border-radius: 12px;
+  padding: 0.75rem;
+}
+
+.footerNote p {
+  margin: 0.2rem 0;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 0;
+  }
+}

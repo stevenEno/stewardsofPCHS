@@ -7,6 +7,7 @@ function Header({ useSamplePreview, onToggleSample, hasLiveProjects, currentPage
   const onShowcase = currentPage === 'showcase';
   const onPathways = currentPage === 'pathways';
   const onGuide = currentPage === 'guide';
+  const onSkillTree = currentPage === 'skilltree';
 
   return (
     <header className={styles.header}>
@@ -27,6 +28,9 @@ function Header({ useSamplePreview, onToggleSample, hasLiveProjects, currentPage
             </a>
             <a className={`${styles.navPill} ${onGuide ? styles.navActive : ''}`} href="/git-walkthrough">
               Student Git Guide
+            </a>
+            <a className={`${styles.navPill} ${onSkillTree ? styles.navActive : ''}`} href="/skill-tree">
+              Skill Tree Lab
             </a>
           </div>
         </div>

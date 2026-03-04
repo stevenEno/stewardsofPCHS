@@ -186,6 +186,23 @@ npm install
 npm run dev
 ```
 
+### Skill Tree test page
+
+A new test page is available at:
+
+- `/skill-tree`
+
+Run the API and web app in separate terminals:
+
+```bash
+npm run api:dev
+npm run dev
+```
+
+Then open:
+
+- `http://127.0.0.1:5173/skill-tree`
+
 If live GitHub project loading is unavailable, the app automatically switches to sample preview data.  
 You can also manually toggle between **Preview Sample Data** and **Switch To Live Data** from the header.
 

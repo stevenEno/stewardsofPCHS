@@ -1,0 +1,2093 @@
+{
+  "version": "1.0",
+  "scope": "condensed-core-v1",
+  "scopeNote": "Prioritizes core high school subjects (grades 9-12) with seed DAGs and cross-subject links; designed to be expanded to 200-500 nodes per subject.",
+  "subjects": [
+    {
+      "name": "Mathematics",
+      "nodes": [
+        {
+          "id": "math-001",
+          "name": "Pre-Algebra Fluency",
+          "description": "Use integer operations, fractions, ratios, and proportional reasoning as bridge prerequisites for high school mathematics.",
+          "level": "Bridge",
+          "color": "#E5E7EB",
+          "resources": [
+            "https://www.khanacademy.org/math/pre-algebra",
+            "https://www.corestandards.org/Math/"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "math-002",
+          "name": "Linear Expressions and Equations",
+          "description": "Model and solve one-variable and multi-step linear equations and inequalities.",
+          "level": "9th Grade",
+          "color": "#BFDBFE",
+          "resources": [
+            "https://www.khanacademy.org/math/algebra",
+            "https://www.openstax.org/details/books/algebra-and-trigonometry-2e"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Physics",
+              "nodeId": "phys-002",
+              "reason": "Required for symbolic manipulation in kinematics."
+            }
+          ]
+        },
+        {
+          "id": "math-003",
+          "name": "Functions and Graph Interpretation",
+          "description": "Interpret function notation, domain/range, transformations, and graphs in context.",
+          "level": "9th Grade",
+          "color": "#BFDBFE",
+          "resources": [
+            "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions",
+            "https://www.corestandards.org/Math/Content/HSF/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Computer Science/Technology",
+              "nodeId": "cs-004",
+              "reason": "Supports algorithmic modeling and input-output reasoning."
+            }
+          ]
+        },
+        {
+          "id": "math-004",
+          "name": "Systems of Equations",
+          "description": "Solve linear systems graphically, substitution, and elimination; apply to word problems.",
+          "level": "9th Grade",
+          "color": "#BFDBFE",
+          "resources": [
+            "https://www.khanacademy.org/math/algebra-home/alg-system-of-equations",
+            "https://www.openstax.org/details/books/algebra-and-trigonometry-2e"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "math-005",
+          "name": "Polynomials and Factoring",
+          "description": "Perform polynomial operations, factor expressions, and identify structure.",
+          "level": "10th Grade",
+          "color": "#93C5FD",
+          "resources": [
+            "https://www.khanacademy.org/math/algebra2",
+            "https://www.corestandards.org/Math/Content/HSA/"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "math-006",
+          "name": "Quadratic Functions",
+          "description": "Represent quadratics in standard/vertex/factored forms; solve and analyze roots and extrema.",
+          "level": "10th Grade",
+          "color": "#93C5FD",
+          "resources": [
+            "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:quadratics",
+            "https://www.openstax.org/details/books/algebra-and-trigonometry-2e"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Physics",
+              "nodeId": "phys-003",
+              "reason": "Projectile motion models are quadratic."
+            }
+          ]
+        },
+        {
+          "id": "math-007",
+          "name": "Exponential and Logarithmic Models",
+          "description": "Analyze growth/decay and inverse relationships with real-world modeling.",
+          "level": "11th Grade",
+          "color": "#60A5FA",
+          "resources": [
+            "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:exponential-and-logarithmic-functions",
+            "https://www.openstax.org/details/books/algebra-and-trigonometry-2e"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Biology",
+              "nodeId": "bio-007",
+              "reason": "Population and biochemical process models use exponential/logarithmic forms."
+            }
+          ]
+        },
+        {
+          "id": "math-008",
+          "name": "Trigonometric Functions",
+          "description": "Use unit-circle definitions, identities, and trigonometric equations in modeling.",
+          "level": "11th Grade",
+          "color": "#60A5FA",
+          "resources": [
+            "https://www.khanacademy.org/math/trigonometry",
+            "https://www.openstax.org/details/books/algebra-and-trigonometry-2e"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Physics",
+              "nodeId": "phys-005",
+              "reason": "Required for vectors and rotational systems."
+            }
+          ]
+        },
+        {
+          "id": "math-009",
+          "name": "Descriptive Statistics and Distributions",
+          "description": "Summarize datasets with center/spread, normal models, and visualizations.",
+          "level": "11th Grade",
+          "color": "#60A5FA",
+          "resources": [
+            "https://www.khanacademy.org/math/statistics-probability",
+            "https://apcentral.collegeboard.org/courses/ap-statistics"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-010",
+              "reason": "Economic indicators and polling analysis require statistical literacy."
+            }
+          ]
+        },
+        {
+          "id": "math-010",
+          "name": "Probability and Inference",
+          "description": "Compute probabilities, sampling error, confidence intervals, and hypothesis tests.",
+          "level": "12th Grade",
+          "color": "#2563EB",
+          "resources": [
+            "https://www.khanacademy.org/math/statistics-probability",
+            "https://apcentral.collegeboard.org/courses/ap-statistics"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-010",
+              "reason": "Behavioral studies in psychology use inferential statistics."
+            }
+          ]
+        },
+        {
+          "id": "math-011",
+          "name": "Limits and Continuity",
+          "description": "Evaluate limits graphically and analytically; define continuity and local behavior.",
+          "level": "AP Level",
+          "color": "#4C1D95",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-calculus-ab",
+            "https://www.khanacademy.org/math/ap-calculus-ab/ab-limits-new"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "math-012",
+          "name": "Derivatives and Applications",
+          "description": "Differentiate elementary functions and apply rates of change, optimization, and motion.",
+          "level": "AP Level",
+          "color": "#4C1D95",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-calculus-ab",
+            "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-1-new"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Physics",
+              "nodeId": "phys-003",
+              "reason": "Velocity and acceleration are derivative relationships."
+            }
+          ]
+        }
+      ],
+      "edges": [
+        { "from": "math-001", "to": "math-002" },
+        { "from": "math-002", "to": "math-003" },
+        { "from": "math-003", "to": "math-004" },
+        { "from": "math-004", "to": "math-005" },
+        { "from": "math-005", "to": "math-006" },
+        { "from": "math-006", "to": "math-007" },
+        { "from": "math-006", "to": "math-008" },
+        { "from": "math-007", "to": "math-009" },
+        { "from": "math-009", "to": "math-010" },
+        { "from": "math-008", "to": "math-011" },
+        { "from": "math-011", "to": "math-012" }
+      ],
+      "legend": {
+        "Bridge": "#E5E7EB",
+        "9th Grade": "#BFDBFE",
+        "10th Grade": "#93C5FD",
+        "11th Grade": "#60A5FA",
+        "12th Grade": "#2563EB",
+        "AP Level": "#4C1D95"
+      }
+    },
+    {
+      "name": "English/Language Arts",
+      "nodes": [
+        {
+          "id": "ela-001",
+          "name": "Grammar and Syntax Foundations",
+          "description": "Apply sentence structure, punctuation, and usage to improve clarity.",
+          "level": "9th Grade",
+          "color": "#FDE68A",
+          "resources": [
+            "https://www.khanacademy.org/humanities/grammar",
+            "https://www.corestandards.org/ELA-Literacy/"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "ela-002",
+          "name": "Close Reading of Informational Text",
+          "description": "Annotate and interpret claims, evidence, and structure in nonfiction texts.",
+          "level": "9th Grade",
+          "color": "#FDE68A",
+          "resources": [
+            "https://www.corestandards.org/ELA-Literacy/",
+            "https://www.khanacademy.org/test-prep/sat-reading-and-writing"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-003",
+              "reason": "Historical document interpretation uses close reading."
+            }
+          ]
+        },
+        {
+          "id": "ela-003",
+          "name": "Narrative and Analytical Writing",
+          "description": "Write organized multi-paragraph responses with textual evidence.",
+          "level": "9th Grade",
+          "color": "#FDE68A",
+          "resources": [
+            "https://owl.purdue.edu/owl/general_writing/index.html",
+            "https://www.corestandards.org/ELA-Literacy/"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "ela-004",
+          "name": "Research Process and Source Evaluation",
+          "description": "Develop research questions, evaluate source credibility, and avoid plagiarism.",
+          "level": "10th Grade",
+          "color": "#FCD34D",
+          "resources": [
+            "https://owl.purdue.edu/owl/research_and_citation/resources.html",
+            "https://www.corestandards.org/ELA-Literacy/WHST/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Computer Science/Technology",
+              "nodeId": "cs-010",
+              "reason": "Digital information literacy overlaps with online research evaluation."
+            }
+          ]
+        },
+        {
+          "id": "ela-005",
+          "name": "Argumentative Writing",
+          "description": "Construct thesis-driven arguments with warrants, evidence integration, and rebuttal.",
+          "level": "10th Grade",
+          "color": "#FCD34D",
+          "resources": [
+            "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments.html",
+            "https://apcentral.collegeboard.org/courses/ap-english-language-and-composition"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-008",
+              "reason": "Civic argumentation requires evidence-based claims."
+            }
+          ]
+        },
+        {
+          "id": "ela-006",
+          "name": "Rhetorical Analysis",
+          "description": "Analyze audience, purpose, style, and rhetorical strategies in complex texts.",
+          "level": "11th Grade",
+          "color": "#F59E0B",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-english-language-and-composition",
+            "https://www.khanacademy.org/test-prep/sat-reading-and-writing"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-006",
+              "reason": "Political speeches and founding texts require rhetorical analysis."
+            }
+          ]
+        },
+        {
+          "id": "ela-007",
+          "name": "Synthesis Essay",
+          "description": "Integrate multiple sources, including quantitative and visual evidence, into a coherent argument.",
+          "level": "11th Grade",
+          "color": "#F59E0B",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-english-language-and-composition",
+            "https://owl.purdue.edu/owl/research_and_citation/using_research.html"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-009",
+              "reason": "Interpreting charts and statistical summaries supports synthesis."
+            }
+          ]
+        },
+        {
+          "id": "ela-008",
+          "name": "Literary Analysis Across Genres",
+          "description": "Interpret themes, motifs, character development, and form in drama, poetry, and prose.",
+          "level": "11th Grade",
+          "color": "#F59E0B",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-english-literature-and-composition",
+            "https://www.corestandards.org/ELA-Literacy/RL/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Arts",
+              "nodeId": "arts-010",
+              "reason": "Script and performance interpretation are aligned."
+            }
+          ]
+        },
+        {
+          "id": "ela-009",
+          "name": "Advanced Seminar Discussion",
+          "description": "Lead evidence-based discussion, questioning, and collaborative interpretation.",
+          "level": "12th Grade",
+          "color": "#D97706",
+          "resources": [
+            "https://www.corestandards.org/ELA-Literacy/SL/",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "ela-010",
+          "name": "Capstone Research Writing",
+          "description": "Produce extended research papers with formal citation and revision cycles.",
+          "level": "12th Grade",
+          "color": "#D97706",
+          "resources": [
+            "https://owl.purdue.edu/owl/research_and_citation/resources.html",
+            "https://www.corestandards.org/ELA-Literacy/WHST/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Biology",
+              "nodeId": "bio-010",
+              "reason": "Scientific communication and evidence reporting overlap."
+            }
+          ]
+        }
+      ],
+      "edges": [
+        { "from": "ela-001", "to": "ela-002" },
+        { "from": "ela-002", "to": "ela-003" },
+        { "from": "ela-003", "to": "ela-004" },
+        { "from": "ela-004", "to": "ela-005" },
+        { "from": "ela-005", "to": "ela-006" },
+        { "from": "ela-006", "to": "ela-007" },
+        { "from": "ela-006", "to": "ela-008" },
+        { "from": "ela-007", "to": "ela-009" },
+        { "from": "ela-008", "to": "ela-009" },
+        { "from": "ela-009", "to": "ela-010" }
+      ],
+      "legend": {
+        "9th Grade": "#FDE68A",
+        "10th Grade": "#FCD34D",
+        "11th Grade": "#F59E0B",
+        "12th Grade": "#D97706"
+      }
+    },
+    {
+      "name": "Science - Biology",
+      "nodes": [
+        {
+          "id": "bio-001",
+          "name": "Biomolecules and Water Chemistry",
+          "description": "Explain structure and function of macromolecules and water properties in living systems.",
+          "level": "9th Grade",
+          "color": "#BBF7D0",
+          "resources": [
+            "https://www.khanacademy.org/science/biology/chemistry--of-life",
+            "https://www.openstax.org/details/books/biology-2e"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Chemistry",
+              "nodeId": "chem-001",
+              "reason": "Chemical bonding and polarity underpin biomolecule behavior."
+            }
+          ]
+        },
+        {
+          "id": "bio-002",
+          "name": "Cell Structure and Transport",
+          "description": "Model cell organelles, membrane transport, and homeostasis.",
+          "level": "9th Grade",
+          "color": "#BBF7D0",
+          "resources": [
+            "https://www.khanacademy.org/science/biology/structure-of-a-cell",
+            "https://www.nextgenscience.org/standards"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "bio-003",
+          "name": "Cellular Energetics",
+          "description": "Analyze photosynthesis and cellular respiration pathways.",
+          "level": "10th Grade",
+          "color": "#86EFAC",
+          "resources": [
+            "https://www.khanacademy.org/science/biology/cellular-respiration-and-fermentation",
+            "https://apcentral.collegeboard.org/courses/ap-biology"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "bio-004",
+          "name": "Cell Cycle and Mitosis",
+          "description": "Describe cell cycle regulation and mitotic division for growth and repair.",
+          "level": "10th Grade",
+          "color": "#86EFAC",
+          "resources": [
+            "https://www.khanacademy.org/science/biology/cell-division",
+            "https://www.nextgenscience.org/standards"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "bio-005",
+          "name": "Meiosis and Mendelian Genetics",
+          "description": "Predict inheritance patterns and connect meiosis to variation.",
+          "level": "10th Grade",
+          "color": "#86EFAC",
+          "resources": [
+            "https://www.khanacademy.org/science/biology/her",
+            "https://www.openstax.org/details/books/biology-2e"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "bio-006",
+          "name": "Molecular Genetics and Gene Expression",
+          "description": "Explain DNA replication, transcription, translation, and regulation.",
+          "level": "11th Grade",
+          "color": "#4ADE80",
+          "resources": [
+            "https://www.khanacademy.org/science/biology/gene-expression-central-dogma",
+            "https://apcentral.collegeboard.org/courses/ap-biology"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Computer Science/Technology",
+              "nodeId": "cs-007",
+              "reason": "Bioinformatics uses data structures and algorithms."
+            }
+          ]
+        },
+        {
+          "id": "bio-007",
+          "name": "Evolution by Natural Selection",
+          "description": "Use evidence to explain adaptation, speciation, and common ancestry.",
+          "level": "11th Grade",
+          "color": "#4ADE80",
+          "resources": [
+            "https://www.khanacademy.org/science/biology/her/evolution-and-natural-selection",
+            "https://apcentral.collegeboard.org/courses/ap-biology"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-002",
+              "reason": "Scientific revolutions affect historical worldviews."
+            }
+          ]
+        },
+        {
+          "id": "bio-008",
+          "name": "Ecology and Energy Flow",
+          "description": "Model ecosystems, trophic levels, and nutrient cycles.",
+          "level": "11th Grade",
+          "color": "#4ADE80",
+          "resources": [
+            "https://www.khanacademy.org/science/biology/ecology",
+            "https://apcentral.collegeboard.org/courses/ap-environmental-science"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Earth & Environmental",
+              "nodeId": "env-006",
+              "reason": "Biogeochemical cycles connect ecosystems and earth systems."
+            }
+          ]
+        },
+        {
+          "id": "bio-009",
+          "name": "AP Biology Experimental Design",
+          "description": "Design controlled investigations, analyze data, and justify claims with evidence.",
+          "level": "AP Level",
+          "color": "#166534",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-biology",
+            "https://www.nextgenscience.org/standards"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-010",
+              "reason": "Inference and uncertainty are required for biological conclusions."
+            }
+          ]
+        },
+        {
+          "id": "bio-010",
+          "name": "Biology Capstone Communication",
+          "description": "Communicate biological arguments in formal reports and presentations.",
+          "level": "12th Grade",
+          "color": "#22C55E",
+          "resources": [
+            "https://www.corestandards.org/ELA-Literacy/WHST/",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "English/Language Arts",
+              "nodeId": "ela-010",
+              "reason": "Research writing conventions transfer directly."
+            }
+          ]
+        }
+      ],
+      "edges": [
+        { "from": "bio-001", "to": "bio-002" },
+        { "from": "bio-002", "to": "bio-003" },
+        { "from": "bio-002", "to": "bio-004" },
+        { "from": "bio-004", "to": "bio-005" },
+        { "from": "bio-005", "to": "bio-006" },
+        { "from": "bio-006", "to": "bio-007" },
+        { "from": "bio-003", "to": "bio-008" },
+        { "from": "bio-007", "to": "bio-009" },
+        { "from": "bio-008", "to": "bio-009" },
+        { "from": "bio-009", "to": "bio-010" }
+      ],
+      "legend": {
+        "9th Grade": "#BBF7D0",
+        "10th Grade": "#86EFAC",
+        "11th Grade": "#4ADE80",
+        "12th Grade": "#22C55E",
+        "AP Level": "#166534"
+      }
+    },
+    {
+      "name": "Science - Chemistry",
+      "nodes": [
+        {
+          "id": "chem-001",
+          "name": "Atomic Structure and Periodicity",
+          "description": "Relate subatomic structure to periodic trends and chemical behavior.",
+          "level": "10th Grade",
+          "color": "#CFFAFE",
+          "resources": [
+            "https://www.khanacademy.org/science/chemistry/atomic-structure-and-properties",
+            "https://apcentral.collegeboard.org/courses/ap-chemistry"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "chem-002",
+          "name": "Chemical Bonding and Molecular Geometry",
+          "description": "Compare ionic/covalent bonding and predict molecular shape and polarity.",
+          "level": "10th Grade",
+          "color": "#CFFAFE",
+          "resources": [
+            "https://www.khanacademy.org/science/chemistry/chemical-bonds",
+            "https://www.openstax.org/details/books/chemistry-2e"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Biology",
+              "nodeId": "bio-001",
+              "reason": "Biomolecule behavior depends on polarity and bonding."
+            }
+          ]
+        },
+        {
+          "id": "chem-003",
+          "name": "Stoichiometry",
+          "description": "Use mole relationships to quantify reactants, products, and limiting reagents.",
+          "level": "10th Grade",
+          "color": "#CFFAFE",
+          "resources": [
+            "https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome",
+            "https://www.openstax.org/details/books/chemistry-2e"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-002",
+              "reason": "Proportional reasoning and equation balancing are prerequisite skills."
+            }
+          ]
+        },
+        {
+          "id": "chem-004",
+          "name": "Thermochemistry",
+          "description": "Analyze heat transfer, enthalpy changes, and calorimetry in reactions.",
+          "level": "11th Grade",
+          "color": "#67E8F9",
+          "resources": [
+            "https://www.khanacademy.org/science/chemistry/thermodynamics-chemistry",
+            "https://apcentral.collegeboard.org/courses/ap-chemistry"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Physics",
+              "nodeId": "phys-004",
+              "reason": "Energy conservation principles overlap."
+            }
+          ]
+        },
+        {
+          "id": "chem-005",
+          "name": "Gas Laws and Kinetic Molecular Theory",
+          "description": "Model gas behavior using pressure-volume-temperature relationships.",
+          "level": "11th Grade",
+          "color": "#67E8F9",
+          "resources": [
+            "https://www.khanacademy.org/science/chemistry/gas-laws-and-kinetic-molecular-theory",
+            "https://www.openstax.org/details/books/chemistry-2e"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-003",
+              "reason": "Function interpretation supports multivariable relationships."
+            }
+          ]
+        },
+        {
+          "id": "chem-006",
+          "name": "Reaction Rates and Equilibrium",
+          "description": "Explain dynamic equilibrium and factors affecting reaction rates and equilibrium position.",
+          "level": "11th Grade",
+          "color": "#67E8F9",
+          "resources": [
+            "https://www.khanacademy.org/science/chemistry/chem-kinetics",
+            "https://apcentral.collegeboard.org/courses/ap-chemistry"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "chem-007",
+          "name": "Acid-Base Chemistry",
+          "description": "Apply pH, pKa, and neutralization concepts to aqueous systems.",
+          "level": "11th Grade",
+          "color": "#67E8F9",
+          "resources": [
+            "https://www.khanacademy.org/science/chemistry/acids-and-bases-topic",
+            "https://apcentral.collegeboard.org/courses/ap-chemistry"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Biology",
+              "nodeId": "bio-003",
+              "reason": "Cellular processes are sensitive to pH."
+            }
+          ]
+        },
+        {
+          "id": "chem-008",
+          "name": "Electrochemistry",
+          "description": "Model oxidation-reduction and electrochemical cell behavior.",
+          "level": "12th Grade",
+          "color": "#22D3EE",
+          "resources": [
+            "https://www.khanacademy.org/science/chemistry/oxidation-reduction",
+            "https://apcentral.collegeboard.org/courses/ap-chemistry"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Physics",
+              "nodeId": "phys-008",
+              "reason": "Electric potential and charge flow are connected concepts."
+            }
+          ]
+        },
+        {
+          "id": "chem-009",
+          "name": "AP Chemistry Quantitative Labs",
+          "description": "Conduct inquiry labs with uncertainty analysis, titration curves, and data interpretation.",
+          "level": "AP Level",
+          "color": "#0E7490",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-chemistry",
+            "https://www.nextgenscience.org/standards"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-010",
+              "reason": "Error analysis and inference support lab conclusions."
+            }
+          ]
+        },
+        {
+          "id": "chem-010",
+          "name": "Materials and Applications",
+          "description": "Connect chemistry principles to industrial, environmental, and biomedical contexts.",
+          "level": "12th Grade",
+          "color": "#22D3EE",
+          "resources": [
+            "https://www.openstax.org/details/books/chemistry-2e",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Earth & Environmental",
+              "nodeId": "env-007",
+              "reason": "Pollution chemistry informs environmental mitigation."
+            }
+          ]
+        }
+      ],
+      "edges": [
+        { "from": "chem-001", "to": "chem-002" },
+        { "from": "chem-002", "to": "chem-003" },
+        { "from": "chem-003", "to": "chem-004" },
+        { "from": "chem-003", "to": "chem-005" },
+        { "from": "chem-004", "to": "chem-006" },
+        { "from": "chem-005", "to": "chem-006" },
+        { "from": "chem-006", "to": "chem-007" },
+        { "from": "chem-007", "to": "chem-008" },
+        { "from": "chem-006", "to": "chem-009" },
+        { "from": "chem-008", "to": "chem-010" }
+      ],
+      "legend": {
+        "10th Grade": "#CFFAFE",
+        "11th Grade": "#67E8F9",
+        "12th Grade": "#22D3EE",
+        "AP Level": "#0E7490"
+      }
+    },
+    {
+      "name": "Physics",
+      "nodes": [
+        {
+          "id": "phys-001",
+          "name": "Measurement, Units, and Vectors",
+          "description": "Use SI units, dimensional analysis, and vector representations.",
+          "level": "10th Grade",
+          "color": "#DDD6FE",
+          "resources": [
+            "https://www.khanacademy.org/science/high-school-physics",
+            "https://apcentral.collegeboard.org/courses/ap-physics-1"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-008",
+              "reason": "Vector components rely on trigonometric functions."
+            }
+          ]
+        },
+        {
+          "id": "phys-002",
+          "name": "Kinematics in 1D and 2D",
+          "description": "Describe motion using position, velocity, acceleration, and motion graphs.",
+          "level": "10th Grade",
+          "color": "#DDD6FE",
+          "resources": [
+            "https://www.khanacademy.org/science/high-school-physics/one-dimensional-motion-2",
+            "https://apcentral.collegeboard.org/courses/ap-physics-1"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-002",
+              "reason": "Algebraic equation solving is required for motion problems."
+            }
+          ]
+        },
+        {
+          "id": "phys-003",
+          "name": "Forces and Newton's Laws",
+          "description": "Apply force diagrams and Newton's laws to predict translational motion.",
+          "level": "10th Grade",
+          "color": "#DDD6FE",
+          "resources": [
+            "https://www.khanacademy.org/science/high-school-physics/forces-and-newtons-laws",
+            "https://apcentral.collegeboard.org/courses/ap-physics-1"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-006",
+              "reason": "Quadratic models appear in constant-acceleration contexts."
+            }
+          ]
+        },
+        {
+          "id": "phys-004",
+          "name": "Work, Energy, and Power",
+          "description": "Use energy conservation and work-energy relationships.",
+          "level": "11th Grade",
+          "color": "#C4B5FD",
+          "resources": [
+            "https://www.khanacademy.org/science/high-school-physics/work-and-energy",
+            "https://apcentral.collegeboard.org/courses/ap-physics-1"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Chemistry",
+              "nodeId": "chem-004",
+              "reason": "Energy transfer is a shared core concept."
+            }
+          ]
+        },
+        {
+          "id": "phys-005",
+          "name": "Momentum and Collisions",
+          "description": "Analyze momentum conservation in isolated systems.",
+          "level": "11th Grade",
+          "color": "#C4B5FD",
+          "resources": [
+            "https://www.khanacademy.org/science/high-school-physics/linear-momentum",
+            "https://apcentral.collegeboard.org/courses/ap-physics-1"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "phys-006",
+          "name": "Rotational Motion and Torque",
+          "description": "Apply rotational kinematics and dynamics, including torque and angular momentum.",
+          "level": "11th Grade",
+          "color": "#C4B5FD",
+          "resources": [
+            "https://www.khanacademy.org/science/high-school-physics/torque-angular-momentum",
+            "https://apcentral.collegeboard.org/courses/ap-physics-1"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-008",
+              "reason": "Angular relationships require trig and periodic reasoning."
+            }
+          ]
+        },
+        {
+          "id": "phys-007",
+          "name": "Oscillations and Waves",
+          "description": "Model periodic motion, wave properties, and energy transport.",
+          "level": "11th Grade",
+          "color": "#C4B5FD",
+          "resources": [
+            "https://www.khanacademy.org/science/high-school-physics/waves-and-sound",
+            "https://apcentral.collegeboard.org/courses/ap-physics-1"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Arts",
+              "nodeId": "arts-006",
+              "reason": "Sound wave properties underlie music acoustics."
+            }
+          ]
+        },
+        {
+          "id": "phys-008",
+          "name": "Electricity and Circuits",
+          "description": "Analyze electric fields, potential difference, current, and simple circuits.",
+          "level": "12th Grade",
+          "color": "#A78BFA",
+          "resources": [
+            "https://www.khanacademy.org/science/high-school-physics/electric-charge-electric-force-and-voltage",
+            "https://apcentral.collegeboard.org/courses/ap-physics-2"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Chemistry",
+              "nodeId": "chem-008",
+              "reason": "Electrochemistry and circuit potential are linked."
+            }
+          ]
+        },
+        {
+          "id": "phys-009",
+          "name": "Fluids and Pressure",
+          "description": "Apply fluid statics and dynamics including buoyancy and continuity.",
+          "level": "12th Grade",
+          "color": "#A78BFA",
+          "resources": [
+            "https://www.khanacademy.org/science/high-school-physics/fluids",
+            "https://apcentral.collegeboard.org/courses/ap-physics-1"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Earth & Environmental",
+              "nodeId": "env-002",
+              "reason": "Atmospheric and oceanic systems are fluid systems."
+            }
+          ]
+        },
+        {
+          "id": "phys-010",
+          "name": "AP Physics Modeling and Labs",
+          "description": "Develop and test physical models using inquiry labs and uncertainty analysis.",
+          "level": "AP Level",
+          "color": "#6D28D9",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-physics-1",
+            "https://www.nextgenscience.org/standards"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-012",
+              "reason": "Advanced rates-of-change modeling strengthens physical interpretation."
+            }
+          ]
+        }
+      ],
+      "edges": [
+        { "from": "phys-001", "to": "phys-002" },
+        { "from": "phys-002", "to": "phys-003" },
+        { "from": "phys-003", "to": "phys-004" },
+        { "from": "phys-003", "to": "phys-005" },
+        { "from": "phys-005", "to": "phys-006" },
+        { "from": "phys-004", "to": "phys-007" },
+        { "from": "phys-004", "to": "phys-008" },
+        { "from": "phys-002", "to": "phys-009" },
+        { "from": "phys-006", "to": "phys-010" },
+        { "from": "phys-008", "to": "phys-010" }
+      ],
+      "legend": {
+        "10th Grade": "#DDD6FE",
+        "11th Grade": "#C4B5FD",
+        "12th Grade": "#A78BFA",
+        "AP Level": "#6D28D9"
+      }
+    },
+    {
+      "name": "Science - Earth & Environmental",
+      "nodes": [
+        {
+          "id": "env-001",
+          "name": "Earth Systems and Spheres",
+          "description": "Describe interactions among geosphere, hydrosphere, atmosphere, and biosphere.",
+          "level": "9th Grade",
+          "color": "#FEF3C7",
+          "resources": [
+            "https://www.khanacademy.org/science/earth-science",
+            "https://www.nextgenscience.org/standards"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Biology",
+              "nodeId": "bio-008",
+              "reason": "Ecosystem dynamics depend on earth system interactions."
+            }
+          ]
+        },
+        {
+          "id": "env-002",
+          "name": "Weather and Climate Systems",
+          "description": "Analyze atmospheric circulation, climate patterns, and energy balance.",
+          "level": "10th Grade",
+          "color": "#FDE68A",
+          "resources": [
+            "https://www.khanacademy.org/science/cosmology-and-astronomy/earth-climate",
+            "https://www.nextgenscience.org/standards"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Physics",
+              "nodeId": "phys-009",
+              "reason": "Fluid and pressure models explain atmospheric behavior."
+            }
+          ]
+        },
+        {
+          "id": "env-003",
+          "name": "Geologic Time and Plate Tectonics",
+          "description": "Use evidence to explain earth history, plate boundaries, and hazards.",
+          "level": "10th Grade",
+          "color": "#FDE68A",
+          "resources": [
+            "https://www.khanacademy.org/science/earth-science/plate-tectonics",
+            "https://www.nextgenscience.org/standards"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-003",
+              "reason": "Geography and resource distribution shape human settlement and conflict."
+            }
+          ]
+        },
+        {
+          "id": "env-004",
+          "name": "Human Population and Resource Use",
+          "description": "Model population trends and resource consumption impacts.",
+          "level": "11th Grade",
+          "color": "#FCD34D",
+          "resources": [
+            "https://www.khanacademy.org/science/biology/ecology/human-impact-on-ecosystems",
+            "https://apcentral.collegeboard.org/courses/ap-environmental-science"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-007",
+              "reason": "Growth/decay models support demographic projections."
+            }
+          ]
+        },
+        {
+          "id": "env-005",
+          "name": "Energy Resources and Sustainability",
+          "description": "Compare energy systems and evaluate sustainability tradeoffs.",
+          "level": "11th Grade",
+          "color": "#FCD34D",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-environmental-science",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Physics",
+              "nodeId": "phys-004",
+              "reason": "Energy transformations and efficiency are core physics concepts."
+            }
+          ]
+        },
+        {
+          "id": "env-006",
+          "name": "Biogeochemical Cycles",
+          "description": "Trace carbon, nitrogen, phosphorus, and water cycles in natural and human systems.",
+          "level": "11th Grade",
+          "color": "#FCD34D",
+          "resources": [
+            "https://www.khanacademy.org/science/biology/ecology/biogeochemical-cycles",
+            "https://apcentral.collegeboard.org/courses/ap-environmental-science"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Biology",
+              "nodeId": "bio-008",
+              "reason": "Ecosystem productivity relies on nutrient cycling."
+            }
+          ]
+        },
+        {
+          "id": "env-007",
+          "name": "Pollution and Environmental Chemistry",
+          "description": "Evaluate pollutant pathways, toxicity, and remediation strategies.",
+          "level": "12th Grade",
+          "color": "#F59E0B",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-environmental-science",
+            "https://www.openstax.org/details/books/chemistry-2e"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Chemistry",
+              "nodeId": "chem-010",
+              "reason": "Chemical mechanisms explain pollutant behavior."
+            }
+          ]
+        },
+        {
+          "id": "env-008",
+          "name": "Environmental Policy and Justice",
+          "description": "Analyze policy frameworks, stakeholders, and environmental justice case studies.",
+          "level": "12th Grade",
+          "color": "#F59E0B",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-environmental-science",
+            "https://www.ed.gov/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-008",
+              "reason": "Public policy analysis requires civic and governmental understanding."
+            }
+          ]
+        },
+        {
+          "id": "env-009",
+          "name": "Data-Driven Environmental Analysis",
+          "description": "Use datasets and uncertainty estimates to make evidence-based environmental recommendations.",
+          "level": "AP Level",
+          "color": "#B45309",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-environmental-science",
+            "https://www.khanacademy.org/math/statistics-probability"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-010",
+              "reason": "Inference and uncertainty quantification are required."
+            }
+          ]
+        },
+        {
+          "id": "env-010",
+          "name": "Local Environmental Action Project",
+          "description": "Design and communicate an actionable local sustainability project with measurable outcomes.",
+          "level": "12th Grade",
+          "color": "#F59E0B",
+          "resources": [
+            "https://www.oercommons.org/",
+            "https://www.corestandards.org/ELA-Literacy/WHST/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "English/Language Arts",
+              "nodeId": "ela-010",
+              "reason": "Capstone communication and evidence-based writing are essential."
+            }
+          ]
+        }
+      ],
+      "edges": [
+        { "from": "env-001", "to": "env-002" },
+        { "from": "env-001", "to": "env-003" },
+        { "from": "env-002", "to": "env-004" },
+        { "from": "env-004", "to": "env-005" },
+        { "from": "env-004", "to": "env-006" },
+        { "from": "env-006", "to": "env-007" },
+        { "from": "env-005", "to": "env-008" },
+        { "from": "env-007", "to": "env-009" },
+        { "from": "env-008", "to": "env-010" },
+        { "from": "env-009", "to": "env-010" }
+      ],
+      "legend": {
+        "9th Grade": "#FEF3C7",
+        "10th Grade": "#FDE68A",
+        "11th Grade": "#FCD34D",
+        "12th Grade": "#F59E0B",
+        "AP Level": "#B45309"
+      }
+    },
+    {
+      "name": "Social Studies/History",
+      "nodes": [
+        {
+          "id": "soc-001",
+          "name": "Historical Thinking Skills",
+          "description": "Source, contextualize, corroborate, and construct historical claims.",
+          "level": "9th Grade",
+          "color": "#FBCFE8",
+          "resources": [
+            "https://www.c3teachers.org/",
+            "https://www.corestandards.org/ELA-Literacy/RH/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "English/Language Arts",
+              "nodeId": "ela-002",
+              "reason": "Close reading is foundational for source analysis."
+            }
+          ]
+        },
+        {
+          "id": "soc-002",
+          "name": "World History Foundations (1200-1750)",
+          "description": "Trace state formation, trade networks, and cultural exchange in early modern world history.",
+          "level": "9th Grade",
+          "color": "#FBCFE8",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-world-history",
+            "https://www.khanacademy.org/humanities/world-history"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "soc-003",
+          "name": "Industrialization and Global Transformation",
+          "description": "Analyze industrialization, imperialism, and social change from 1750 onward.",
+          "level": "10th Grade",
+          "color": "#F9A8D4",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-world-history",
+            "https://www.khanacademy.org/humanities/world-history"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Earth & Environmental",
+              "nodeId": "env-004",
+              "reason": "Industrialization links to population and resource impacts."
+            }
+          ]
+        },
+        {
+          "id": "soc-004",
+          "name": "U.S. Foundations and Constitutional Development",
+          "description": "Explain colonial contexts, revolution, constitutional design, and federalism.",
+          "level": "10th Grade",
+          "color": "#F9A8D4",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-united-states-history",
+            "https://www.khanacademy.org/humanities/us-history"
+          ],
+          "crossLinks": [
+            {
+              "subject": "English/Language Arts",
+              "nodeId": "ela-006",
+              "reason": "Founding documents require rhetorical and textual analysis."
+            }
+          ]
+        },
+        {
+          "id": "soc-005",
+          "name": "U.S. Expansion, Conflict, and Reform",
+          "description": "Interpret causes and consequences of expansion, civil war, reconstruction, and reform eras.",
+          "level": "11th Grade",
+          "color": "#F472B6",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-united-states-history",
+            "https://www.khanacademy.org/humanities/us-history"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "soc-006",
+          "name": "Civic Institutions and Constitutional Principles",
+          "description": "Analyze branches of government, checks and balances, rights, and liberties.",
+          "level": "11th Grade",
+          "color": "#F472B6",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-united-states-government-and-politics",
+            "https://www.khanacademy.org/humanities/us-government-and-civics"
+          ],
+          "crossLinks": [
+            {
+              "subject": "English/Language Arts",
+              "nodeId": "ela-005",
+              "reason": "Argument writing supports constitutional and policy analysis."
+            }
+          ]
+        },
+        {
+          "id": "soc-007",
+          "name": "Political Participation and Public Policy",
+          "description": "Evaluate elections, interest groups, media, and policy-making processes.",
+          "level": "11th Grade",
+          "color": "#F472B6",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-united-states-government-and-politics",
+            "https://www.khanacademy.org/humanities/us-government-and-civics"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Computer Science/Technology",
+              "nodeId": "cs-010",
+              "reason": "Media literacy and information ecosystems affect civic participation."
+            }
+          ]
+        },
+        {
+          "id": "soc-008",
+          "name": "Macroeconomic Indicators and Policy",
+          "description": "Use GDP, inflation, unemployment, and fiscal/monetary policy models.",
+          "level": "12th Grade",
+          "color": "#EC4899",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+            "https://www.khanacademy.org/economics-finance-domain/macroeconomics"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-009",
+              "reason": "Interpreting time-series and distributions is essential."
+            }
+          ]
+        },
+        {
+          "id": "soc-009",
+          "name": "Microeconomics and Market Systems",
+          "description": "Analyze supply-demand, market structures, and consumer/producer behavior.",
+          "level": "12th Grade",
+          "color": "#EC4899",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-microeconomics",
+            "https://www.khanacademy.org/economics-finance-domain/microeconomics"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-003",
+              "reason": "Function graphs and equilibrium models rely on algebraic reasoning."
+            }
+          ]
+        },
+        {
+          "id": "soc-010",
+          "name": "Psychology Foundations (Elective)",
+          "description": "Survey cognition, behavior, development, and research methods in psychology.",
+          "level": "12th Grade",
+          "color": "#EC4899",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-psychology",
+            "https://www.khanacademy.org/science/health-and-medicine/executive-systems-of-the-brain"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Biology",
+              "nodeId": "bio-006",
+              "reason": "Neuroscience and behavior connect molecular and cognitive levels."
+            }
+          ]
+        }
+      ],
+      "edges": [
+        { "from": "soc-001", "to": "soc-002" },
+        { "from": "soc-002", "to": "soc-003" },
+        { "from": "soc-001", "to": "soc-004" },
+        { "from": "soc-004", "to": "soc-005" },
+        { "from": "soc-004", "to": "soc-006" },
+        { "from": "soc-006", "to": "soc-007" },
+        { "from": "soc-006", "to": "soc-008" },
+        { "from": "soc-008", "to": "soc-009" },
+        { "from": "soc-001", "to": "soc-010" },
+        { "from": "soc-008", "to": "soc-010" }
+      ],
+      "legend": {
+        "9th Grade": "#FBCFE8",
+        "10th Grade": "#F9A8D4",
+        "11th Grade": "#F472B6",
+        "12th Grade": "#EC4899"
+      }
+    },
+    {
+      "name": "World Languages",
+      "nodes": [
+        {
+          "id": "lang-001",
+          "name": "Novice Communication (Template)",
+          "description": "Exchange basic information in interpersonal, interpretive, and presentational modes.",
+          "level": "9th Grade",
+          "color": "#BAE6FD",
+          "resources": [
+            "https://www.actfl.org/publications/all/world-readiness-standards-learning-languages",
+            "https://www.actfl.org/educator-resources/world-readiness-standards-for-learning-languages/standards-summary"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "lang-002",
+          "name": "High-Frequency Vocabulary and Grammar",
+          "description": "Use foundational vocabulary, agreement, tense markers, and basic sentence patterns.",
+          "level": "9th Grade",
+          "color": "#BAE6FD",
+          "resources": [
+            "https://www.oercommons.org/",
+            "https://www.actfl.org/educator-resources/world-readiness-standards-for-learning-languages/standards-summary"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "lang-003",
+          "name": "Cultural Products, Practices, Perspectives",
+          "description": "Interpret cultural contexts and compare with learners' own communities.",
+          "level": "10th Grade",
+          "color": "#7DD3FC",
+          "resources": [
+            "https://www.actfl.org/publications/all/world-readiness-standards-learning-languages",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-002",
+              "reason": "Historical context deepens cultural interpretation."
+            }
+          ]
+        },
+        {
+          "id": "lang-004",
+          "name": "Intermediate Writing and Speaking",
+          "description": "Narrate and describe in connected discourse across familiar topics.",
+          "level": "10th Grade",
+          "color": "#7DD3FC",
+          "resources": [
+            "https://www.actfl.org/educator-resources/world-readiness-standards-for-learning-languages/standards-summary",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "English/Language Arts",
+              "nodeId": "ela-003",
+              "reason": "Transfer of composition structure supports target-language writing."
+            }
+          ]
+        },
+        {
+          "id": "lang-005",
+          "name": "Spanish Pathway: Intermediate High",
+          "description": "Apply language functions and cultural competence aligned to Spanish high school progression.",
+          "level": "11th Grade",
+          "color": "#38BDF8",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-spanish-language-and-culture",
+            "https://www.actfl.org/publications/all/world-readiness-standards-learning-languages"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "lang-006",
+          "name": "French Pathway: Intermediate High",
+          "description": "Build interpretive and presentational proficiency with francophone authentic texts and media.",
+          "level": "11th Grade",
+          "color": "#38BDF8",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-french-language-and-culture",
+            "https://www.actfl.org/publications/all/world-readiness-standards-learning-languages"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "lang-007",
+          "name": "German Pathway: Intermediate High",
+          "description": "Develop communicative proficiency and intercultural comparison in German contexts.",
+          "level": "11th Grade",
+          "color": "#38BDF8",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-german-language-and-culture",
+            "https://www.actfl.org/publications/all/world-readiness-standards-learning-languages"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "lang-008",
+          "name": "Advanced Interpretive Communication",
+          "description": "Analyze authentic audio/video/text sources on abstract and contemporary topics.",
+          "level": "12th Grade",
+          "color": "#0EA5E9",
+          "resources": [
+            "https://www.actfl.org/educator-resources/world-readiness-standards-for-learning-languages/standards-summary",
+            "https://apcentral.collegeboard.org/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "English/Language Arts",
+              "nodeId": "ela-006",
+              "reason": "Rhetorical interpretation transfers across languages."
+            }
+          ]
+        },
+        {
+          "id": "lang-009",
+          "name": "Advanced Presentational Writing/Speaking",
+          "description": "Produce sustained arguments and explanations for academic and civic audiences.",
+          "level": "12th Grade",
+          "color": "#0EA5E9",
+          "resources": [
+            "https://apcentral.collegeboard.org/",
+            "https://www.actfl.org/publications/all/world-readiness-standards-learning-languages"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-007",
+              "reason": "Public issue analysis supports advanced presentational tasks."
+            }
+          ]
+        },
+        {
+          "id": "lang-010",
+          "name": "AP Language and Culture Performance",
+          "description": "Demonstrate college-level language proficiency through integrated skills and cultural analysis.",
+          "level": "AP Level",
+          "color": "#0369A1",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-spanish-language-and-culture",
+            "https://apcentral.collegeboard.org/courses/ap-french-language-and-culture",
+            "https://apcentral.collegeboard.org/courses/ap-german-language-and-culture"
+          ],
+          "crossLinks": []
+        }
+      ],
+      "edges": [
+        { "from": "lang-001", "to": "lang-002" },
+        { "from": "lang-002", "to": "lang-003" },
+        { "from": "lang-002", "to": "lang-004" },
+        { "from": "lang-004", "to": "lang-005" },
+        { "from": "lang-004", "to": "lang-006" },
+        { "from": "lang-004", "to": "lang-007" },
+        { "from": "lang-005", "to": "lang-008" },
+        { "from": "lang-006", "to": "lang-008" },
+        { "from": "lang-007", "to": "lang-008" },
+        { "from": "lang-008", "to": "lang-009" },
+        { "from": "lang-009", "to": "lang-010" }
+      ],
+      "legend": {
+        "9th Grade": "#BAE6FD",
+        "10th Grade": "#7DD3FC",
+        "11th Grade": "#38BDF8",
+        "12th Grade": "#0EA5E9",
+        "AP Level": "#0369A1"
+      }
+    },
+    {
+      "name": "Arts",
+      "nodes": [
+        {
+          "id": "arts-001",
+          "name": "Visual Composition Foundations",
+          "description": "Apply line, shape, contrast, and balance in 2D visual design.",
+          "level": "9th Grade",
+          "color": "#D9F99D",
+          "resources": [
+            "https://www.nationalartsstandards.org/content/national-core-arts-standards",
+            "https://www.khanacademy.org/humanities/art-history-basics"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "arts-002",
+          "name": "Drawing and Observational Techniques",
+          "description": "Use proportion, perspective, and value to represent form and space.",
+          "level": "9th Grade",
+          "color": "#D9F99D",
+          "resources": [
+            "https://www.nationalartsstandards.org/content/national-core-arts-standards",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-008",
+              "reason": "Perspective and spatial reasoning align with geometry/trigonometry."
+            }
+          ]
+        },
+        {
+          "id": "arts-003",
+          "name": "Color Theory and Media",
+          "description": "Manipulate hue, value, saturation, and material choices for visual effect.",
+          "level": "10th Grade",
+          "color": "#BEF264",
+          "resources": [
+            "https://www.nationalartsstandards.org/content/national-core-arts-standards",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "arts-004",
+          "name": "Music Theory Basics",
+          "description": "Read notation, intervals, rhythm, and harmony in short musical excerpts.",
+          "level": "10th Grade",
+          "color": "#BEF264",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-music-theory",
+            "https://www.nationalartsstandards.org/content/national-core-arts-standards"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-008",
+              "reason": "Rhythm patterns and wave periodicity connect to proportional reasoning."
+            }
+          ]
+        },
+        {
+          "id": "arts-005",
+          "name": "Ensemble Performance Skills",
+          "description": "Develop rehearsal techniques, listening, blend, and expressive performance.",
+          "level": "10th Grade",
+          "color": "#BEF264",
+          "resources": [
+            "https://www.nationalartsstandards.org/content/national-core-arts-standards",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "arts-006",
+          "name": "Acoustics and Sound in Music",
+          "description": "Relate pitch, timbre, resonance, and wave properties to musical performance.",
+          "level": "11th Grade",
+          "color": "#84CC16",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-music-theory",
+            "https://www.khanacademy.org/science/high-school-physics/waves-and-sound"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Physics",
+              "nodeId": "phys-007",
+              "reason": "Wave behavior governs musical acoustics."
+            }
+          ]
+        },
+        {
+          "id": "arts-007",
+          "name": "Theater Foundations",
+          "description": "Analyze scripts, blocking, characterization, and stagecraft fundamentals.",
+          "level": "11th Grade",
+          "color": "#84CC16",
+          "resources": [
+            "https://www.nationalartsstandards.org/content/national-core-arts-standards",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "English/Language Arts",
+              "nodeId": "ela-008",
+              "reason": "Drama interpretation and character analysis overlap."
+            }
+          ]
+        },
+        {
+          "id": "arts-008",
+          "name": "Portfolio Development (Visual/Media)",
+          "description": "Curate iterative work with reflection, critique, and revision evidence.",
+          "level": "12th Grade",
+          "color": "#65A30D",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-art-and-design",
+            "https://www.nationalartsstandards.org/content/national-core-arts-standards"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Computer Science/Technology",
+              "nodeId": "cs-009",
+              "reason": "Digital creation and portfolio publishing tools are shared."
+            }
+          ]
+        },
+        {
+          "id": "arts-009",
+          "name": "AP Music Theory Analysis",
+          "description": "Perform harmonic analysis, part writing, and aural skills at AP depth.",
+          "level": "AP Level",
+          "color": "#4D7C0F",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-music-theory",
+            "https://www.khanacademy.org/humanities/music"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "arts-010",
+          "name": "Interdisciplinary Arts Capstone",
+          "description": "Create and present an original interdisciplinary performance or exhibition with critical rationale.",
+          "level": "12th Grade",
+          "color": "#65A30D",
+          "resources": [
+            "https://www.nationalartsstandards.org/content/national-core-arts-standards",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "English/Language Arts",
+              "nodeId": "ela-009",
+              "reason": "Presentation, critique, and audience analysis are shared competencies."
+            }
+          ]
+        }
+      ],
+      "edges": [
+        { "from": "arts-001", "to": "arts-002" },
+        { "from": "arts-002", "to": "arts-003" },
+        { "from": "arts-001", "to": "arts-004" },
+        { "from": "arts-004", "to": "arts-005" },
+        { "from": "arts-005", "to": "arts-006" },
+        { "from": "arts-007", "to": "arts-010" },
+        { "from": "arts-003", "to": "arts-008" },
+        { "from": "arts-006", "to": "arts-009" },
+        { "from": "arts-008", "to": "arts-010" },
+        { "from": "arts-009", "to": "arts-010" }
+      ],
+      "legend": {
+        "9th Grade": "#D9F99D",
+        "10th Grade": "#BEF264",
+        "11th Grade": "#84CC16",
+        "12th Grade": "#65A30D",
+        "AP Level": "#4D7C0F"
+      }
+    },
+    {
+      "name": "Computer Science/Technology",
+      "nodes": [
+        {
+          "id": "cs-001",
+          "name": "Digital Citizenship and Safety",
+          "description": "Practice secure, ethical, and responsible use of digital systems.",
+          "level": "9th Grade",
+          "color": "#E9D5FF",
+          "resources": [
+            "https://csteachers.org/k12standards/",
+            "https://www.ed.gov/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Physical Education/Health",
+              "nodeId": "peh-008",
+              "reason": "Digital wellness and cyber safety overlap with health education."
+            }
+          ]
+        },
+        {
+          "id": "cs-002",
+          "name": "Computing Systems Fundamentals",
+          "description": "Explain hardware, software, operating systems, and data representation basics.",
+          "level": "9th Grade",
+          "color": "#E9D5FF",
+          "resources": [
+            "https://csteachers.org/k12standards/",
+            "https://www.khanacademy.org/computing/computer-science"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "cs-003",
+          "name": "Algorithms and Pseudocode",
+          "description": "Design and trace algorithms with sequencing, conditionals, and iteration.",
+          "level": "10th Grade",
+          "color": "#D8B4FE",
+          "resources": [
+            "https://csteachers.org/k12standards/",
+            "https://www.khanacademy.org/computing/ap-computer-science-principles"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-003",
+              "reason": "Function thinking supports algorithmic decomposition."
+            }
+          ]
+        },
+        {
+          "id": "cs-004",
+          "name": "Programming Fundamentals",
+          "description": "Implement programs with variables, control flow, functions, and debugging.",
+          "level": "10th Grade",
+          "color": "#D8B4FE",
+          "resources": [
+            "https://www.khanacademy.org/computing/computer-programming",
+            "https://csteachers.org/k12standards/"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "cs-005",
+          "name": "Data and Analysis",
+          "description": "Collect, clean, and visualize data; reason about patterns and limitations.",
+          "level": "10th Grade",
+          "color": "#D8B4FE",
+          "resources": [
+            "https://csteachers.org/k12standards/",
+            "https://www.khanacademy.org/math/statistics-probability"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-009",
+              "reason": "Statistical summaries and distributions are shared foundations."
+            }
+          ]
+        },
+        {
+          "id": "cs-006",
+          "name": "Object-Oriented Programming",
+          "description": "Model classes, objects, encapsulation, and modular design.",
+          "level": "11th Grade",
+          "color": "#C084FC",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-computer-science-a",
+            "https://www.khanacademy.org/computing/computer-programming"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "cs-007",
+          "name": "Data Structures and Efficiency",
+          "description": "Use arrays/lists/maps and reason about algorithmic performance tradeoffs.",
+          "level": "11th Grade",
+          "color": "#C084FC",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-computer-science-a",
+            "https://csteachers.org/k12standards/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Biology",
+              "nodeId": "bio-006",
+              "reason": "Biological datasets require structured storage and search."
+            }
+          ]
+        },
+        {
+          "id": "cs-008",
+          "name": "Networks and Internet",
+          "description": "Explain internet architecture, protocols, latency, and cybersecurity basics.",
+          "level": "11th Grade",
+          "color": "#C084FC",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-computer-science-principles",
+            "https://csteachers.org/k12standards/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-007",
+              "reason": "Information networks influence civic discourse."
+            }
+          ]
+        },
+        {
+          "id": "cs-009",
+          "name": "Creative Computing and App Design",
+          "description": "Develop user-centered digital artifacts with iteration and testing.",
+          "level": "12th Grade",
+          "color": "#A855F7",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-computer-science-principles",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Arts",
+              "nodeId": "arts-008",
+              "reason": "Digital media tools support portfolio creation."
+            }
+          ]
+        },
+        {
+          "id": "cs-010",
+          "name": "Computing Impacts and Ethics",
+          "description": "Evaluate societal, legal, and ethical impacts of computing systems.",
+          "level": "12th Grade",
+          "color": "#A855F7",
+          "resources": [
+            "https://apcentral.collegeboard.org/courses/ap-computer-science-principles",
+            "https://csteachers.org/k12standards/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-006",
+              "reason": "Policy and rights frameworks govern technology use."
+            }
+          ]
+        }
+      ],
+      "edges": [
+        { "from": "cs-001", "to": "cs-002" },
+        { "from": "cs-002", "to": "cs-003" },
+        { "from": "cs-003", "to": "cs-004" },
+        { "from": "cs-004", "to": "cs-006" },
+        { "from": "cs-004", "to": "cs-005" },
+        { "from": "cs-006", "to": "cs-007" },
+        { "from": "cs-005", "to": "cs-007" },
+        { "from": "cs-002", "to": "cs-008" },
+        { "from": "cs-007", "to": "cs-009" },
+        { "from": "cs-008", "to": "cs-010" }
+      ],
+      "legend": {
+        "9th Grade": "#E9D5FF",
+        "10th Grade": "#D8B4FE",
+        "11th Grade": "#C084FC",
+        "12th Grade": "#A855F7"
+      }
+    },
+    {
+      "name": "Physical Education/Health",
+      "nodes": [
+        {
+          "id": "peh-001",
+          "name": "Movement Competency Foundations",
+          "description": "Demonstrate core motor patterns and safe movement mechanics.",
+          "level": "9th Grade",
+          "color": "#FECDD3",
+          "resources": [
+            "https://www.shapeamerica.org/sTandards/pe/",
+            "https://www.shapeamerica.org/standards"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "peh-002",
+          "name": "Fitness Principles and Goal Setting",
+          "description": "Apply FITT principles and track measurable fitness goals.",
+          "level": "9th Grade",
+          "color": "#FECDD3",
+          "resources": [
+            "https://www.shapeamerica.org/standards",
+            "https://www.cdc.gov/healthyschools/index.htm"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Mathematics",
+              "nodeId": "math-009",
+              "reason": "Progress tracking uses descriptive statistics and trend analysis."
+            }
+          ]
+        },
+        {
+          "id": "peh-003",
+          "name": "Nutrition and Energy Balance",
+          "description": "Analyze nutrient roles, caloric balance, and dietary decision-making.",
+          "level": "10th Grade",
+          "color": "#FDA4AF",
+          "resources": [
+            "https://www.cdc.gov/healthyschools/nutrition/index.htm",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Science - Biology",
+              "nodeId": "bio-003",
+              "reason": "Cellular energetics informs nutrition and metabolism."
+            }
+          ]
+        },
+        {
+          "id": "peh-004",
+          "name": "Personal and Community Health",
+          "description": "Evaluate determinants of health, prevention strategies, and public health systems.",
+          "level": "10th Grade",
+          "color": "#FDA4AF",
+          "resources": [
+            "https://www.cdc.gov/healthyschools/index.htm",
+            "https://www.ed.gov/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-007",
+              "reason": "Public policy affects community health outcomes."
+            }
+          ]
+        },
+        {
+          "id": "peh-005",
+          "name": "Mental and Emotional Wellness",
+          "description": "Practice stress management, self-regulation, and help-seeking strategies.",
+          "level": "11th Grade",
+          "color": "#FB7185",
+          "resources": [
+            "https://www.cdc.gov/healthyschools/mental-emotional-health/index.htm",
+            "https://www.oercommons.org/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Social Studies/History",
+              "nodeId": "soc-010",
+              "reason": "Psychology concepts support mental wellness literacy."
+            }
+          ]
+        },
+        {
+          "id": "peh-006",
+          "name": "Team Strategy and Leadership",
+          "description": "Apply tactical decision-making, communication, and leadership in team contexts.",
+          "level": "11th Grade",
+          "color": "#FB7185",
+          "resources": [
+            "https://www.shapeamerica.org/sTandards/pe/",
+            "https://www.shapeamerica.org/standards"
+          ],
+          "crossLinks": [
+            {
+              "subject": "English/Language Arts",
+              "nodeId": "ela-009",
+              "reason": "Collaborative communication skills transfer across domains."
+            }
+          ]
+        },
+        {
+          "id": "peh-007",
+          "name": "Lifetime Physical Activity Planning",
+          "description": "Design sustainable personal activity plans for long-term health.",
+          "level": "12th Grade",
+          "color": "#F43F5E",
+          "resources": [
+            "https://www.shapeamerica.org/standards",
+            "https://www.cdc.gov/physicalactivity/index.html"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "peh-008",
+          "name": "Digital Health and Media Literacy",
+          "description": "Critique online health claims and manage technology habits for wellbeing.",
+          "level": "12th Grade",
+          "color": "#F43F5E",
+          "resources": [
+            "https://www.cdc.gov/healthyschools/index.htm",
+            "https://www.ed.gov/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "Computer Science/Technology",
+              "nodeId": "cs-001",
+              "reason": "Digital safety and responsible platform use are shared competencies."
+            }
+          ]
+        },
+        {
+          "id": "peh-009",
+          "name": "First Aid and Risk Response",
+          "description": "Apply basic emergency response, injury prevention, and safety protocols.",
+          "level": "12th Grade",
+          "color": "#F43F5E",
+          "resources": [
+            "https://www.cdc.gov/healthyschools/index.htm",
+            "https://www.shapeamerica.org/standards"
+          ],
+          "crossLinks": []
+        },
+        {
+          "id": "peh-010",
+          "name": "Health Advocacy Capstone",
+          "description": "Design and present a school or community health initiative using data and communication strategies.",
+          "level": "12th Grade",
+          "color": "#F43F5E",
+          "resources": [
+            "https://www.cdc.gov/healthyschools/index.htm",
+            "https://www.corestandards.org/ELA-Literacy/WHST/"
+          ],
+          "crossLinks": [
+            {
+              "subject": "English/Language Arts",
+              "nodeId": "ela-010",
+              "reason": "Capstone health advocacy requires formal evidence-based writing."
+            }
+          ]
+        }
+      ],
+      "edges": [
+        { "from": "peh-001", "to": "peh-002" },
+        { "from": "peh-002", "to": "peh-003" },
+        { "from": "peh-002", "to": "peh-004" },
+        { "from": "peh-004", "to": "peh-005" },
+        { "from": "peh-001", "to": "peh-006" },
+        { "from": "peh-005", "to": "peh-007" },
+        { "from": "peh-004", "to": "peh-008" },
+        { "from": "peh-001", "to": "peh-009" },
+        { "from": "peh-007", "to": "peh-010" },
+        { "from": "peh-008", "to": "peh-010" }
+      ],
+      "legend": {
+        "9th Grade": "#FECDD3",
+        "10th Grade": "#FDA4AF",
+        "11th Grade": "#FB7185",
+        "12th Grade": "#F43F5E"
+      }
+    }
+  ]
+}
