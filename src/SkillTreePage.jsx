@@ -25,6 +25,8 @@ function SkillTreePage() {
   const [subjectTree, setSubjectTree] = useState(null);
   const [recommendation, setRecommendation] = useState(null);
   const [selectedNodeId, setSelectedNodeId] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [enabledLevels, setEnabledLevels] = useState({});
   const [crosslinkData, setCrosslinkData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isUpdating, setIsUpdating] = useState(false);
@@ -34,6 +36,39 @@ function SkillTreePage() {
     if (!recommendation || !selectedNodeId) return null;
     return recommendation.nodes.find((node) => node.id === selectedNodeId) || null;
   }, [recommendation, selectedNodeId]);
+
+  const searchMatches = useMemo(() => {
+    if (!recommendation || !searchQuery.trim()) return [];
+    const q = searchQuery.trim().toLowerCase();
+    return recommendation.nodes
+      .filter((node) => node.name.toLowerCase().includes(q) || node.id.toLowerCase().includes(q))
+      .slice(0, 10);
+  }, [recommendation, searchQuery]);
+
+  const levelEntries = useMemo(() => {
+    if (!subjectTree?.legend) return [];
+    return Object.entries(subjectTree.legend);
+  }, [subjectTree]);
+
+  const visibleGraph = useMemo(() => {
+    if (!recommendation) return { nodes: [], edges: [] };
+
+    const activeLevels = new Set(
+      Object.entries(enabledLevels)
+        .filter(([, enabled]) => enabled)
+        .map(([level]) => level)
+    );
+
+    const levelFilterActive = activeLevels.size > 0;
+    const nodes = levelFilterActive
+      ? recommendation.nodes.filter((node) => activeLevels.has(node.level))
+      : recommendation.nodes;
+
+    const nodeIds = new Set(nodes.map((node) => node.id));
+    const edges = (recommendation.edges || []).filter((edge) => nodeIds.has(edge.from) && nodeIds.has(edge.to));
+
+    return { nodes, edges };
+  }, [recommendation, enabledLevels]);
 
   async function reloadSubjectData(nextSubjectKey, nextUserId, preserveSelected = false) {
     setIsLoading(true);
@@ -190,6 +225,56 @@ function SkillTreePage() {
           </button>
         </section>
 
+        <section className={styles.searchBar}>
+          <label>
+            Find a node
+            <input
+              value={searchQuery}
+              onChange={(event) => setSearchQuery(event.target.value)}
+              placeholder="Try: derivative, triangle, regression..."
+            />
+          </label>
+          {searchMatches.length > 0 ? (
+            <div className={styles.searchResults}>
+              {searchMatches.map((node) => (
+                <button key={node.id} type="button" onClick={() => setSelectedNodeId(node.id)}>
+                  {node.name} ({node.id})
+                </button>
+              ))}
+            </div>
+          ) : null}
+        </section>
+
+        <section className={styles.legendPanel}>
+          <p>Course Filters</p>
+          <div className={styles.legendItems}>
+            {levelEntries.map(([level, color]) => {
+              const enabled = enabledLevels[level] === true;
+              return (
+                <button
+                  key={level}
+                  type="button"
+                  className={`${styles.legendToggle} ${enabled ? styles.legendToggleOn : ''}`}
+                  onClick={() =>
+                    setEnabledLevels((current) => ({
+                      ...current,
+                      [level]: !current[level]
+                    }))
+                  }
+                >
+                  <span style={{ backgroundColor: color }} />
+                  {level}
+                </button>
+              );
+            })}
+            {levelEntries.length > 0 ? (
+              <button type="button" className={styles.legendReset} onClick={() => setEnabledLevels({})}>
+                Clear Filters
+              </button>
+            ) : null}
+          </div>
+        </section>
+
         {error ? <p className={styles.error}>{error}</p> : null}
 
         <section className={styles.metrics}>
@@ -217,8 +302,8 @@ function SkillTreePage() {
             <p className={styles.graphHint}>Click a node to inspect details. Zoom and pan to explore dependencies.</p>
             {!isLoading ? (
               <SkillTreeGraph
-                nodes={recommendation?.nodes || []}
-                edges={recommendation?.edges || []}
+                nodes={visibleGraph.nodes}
+                edges={visibleGraph.edges}
                 selectedNodeId={selectedNodeId}
                 onSelectNode={setSelectedNodeId}
               />
